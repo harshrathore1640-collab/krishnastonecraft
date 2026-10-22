@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#211914">
+<meta name="description" content="Krishna Stone Craft — Mandir, stone inlay, wall designs, cladding and stone murals. Manufacturing and installation across India.">
+<title>Krishna Stone Craft | Architectural Stone Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark:#211914;
+  --dark2:#30241c;
+  --brown:#76533b;
+  --sand:#c8a47b;
+  --gold:#d8b77e;
+  --ivory:#f7f1e8;
+  --cream:#ede1d0;
+  --text:#2b241e;
+  --muted:#8a7c6c;
+  --white:#fff;
+  --line:#e6d8c7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.65}
+img{width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.container{width:min(1200px,91%);margin:auto}
+.gold{color:var(--gold)}
+.announcement{background:#17110d;color:#dfc69f;text-align:center;padding:9px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+header{position:sticky;top:0;z-index:100;background:rgba(33,25,20,.97);border-bottom:1px solid #47362a;backdrop-filter:blur(12px)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px;color:white}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand-logo{height:47px;width:47px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:31px}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.05;letter-spacing:.4px}
+.brand-sub{font-size:8px;letter-spacing:2.1px;text-transform:uppercase;color:#c7b19a;margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:25px;font-size:12px;color:#eee3d7}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;background:var(--gold);color:#251a12;border:1px solid var(--gold);font-size:11px;font-weight:700;letter-spacing:.4px;transition:.25s}
+.btn:hover{background:#f0d6a7;border-color:#f0d6a7;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:white;border-color:#b69b78}
+.btn-outline:hover{color:var(--dark)}
+.menu-toggle{display:none;background:none;border:1px solid #69513d;color:white;padding:8px 12px;font-size:21px}
+
+/* Hero */
+.hero{background:var(--dark);color:white;overflow:hidden}
+.hero-grid{min-height:610px;display:grid;grid-template-columns:.88fr 1.12fr;gap:48px;align-items:center;padding-top:55px;padding-bottom:65px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--brown);font-size:10px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase}
+.eyebrow:before{content:"";width:30px;height:1px;background:currentColor}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(54px,6.2vw,82px);font-weight:500;line-height:.98;letter-spacing:-1px;margin:26px 0}
+.hero h1 em{color:var(--gold);font-weight:400}
+.hero-copy{max-width:470px;color:#c9bdb1;font-size:13px;line-height:2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:39px;padding-top:23px;border-top:1px solid #49382b}
+.stat strong{display:block;font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);font-weight:500}
+.stat span{font-size:9px;color:#c7b8a8;letter-spacing:.7px}
+.hero-gallery{height:500px;position:relative}
+.hero-main{height:100%;width:100%;object-fit:cover;background:#59402c}
+.hero-gallery:after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid #a8875d;pointer-events:none}
+.hero-image-caption{position:absolute;z-index:2;bottom:22px;left:-22px;background:#f7f0e6;color:var(--dark);padding:17px 22px;max-width:270px}
+.hero-image-caption small{font-size:9px;color:var(--brown);letter-spacing:1.7px;text-transform:uppercase}
+.hero-image-caption strong{display:block;font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500;line-height:1.15;margin-top:5px}
+.hero-arrows{position:absolute;right:12px;bottom:12px;display:flex;gap:6px;z-index:4}
+.hero-arrows button{height:40px;width:40px;border:0;background:#fff;color:var(--dark);font-size:20px}
+.hero-counter{position:absolute;top:16px;right:16px;z-index:3;color:white;background:#201710b8;padding:8px 12px;font-size:10px;letter-spacing:1px}
+
+/* Trust */
+.trust{background:var(--ivory);border-bottom:1px solid var(--line);padding:22px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:12px}
+.trust-icon{height:39px;width:39px;border:1px solid #d6bea0;color:var(--brown);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.trust-item strong{display:block;font-size:11px}
+.trust-item small{display:block;color:var(--muted);font-size:9px}
+
+/* General sections */
+.section{padding:88px 0}
+.heading{text-align:center;max-width:690px;margin:0 auto 40px}
+.heading .eyebrow{justify-content:center}
+.heading h2{font-family:'Cormorant Garamond',serif;font-size:clamp(37px,4.7vw,55px);font-weight:500;line-height:1.08;margin:14px 0}
+.heading p{color:var(--muted);font-size:12px;line-height:2}
+.heading.light{color:white}
+.heading.light p{color:#c5b5a5}
+.heading.light .eyebrow{color:var(--gold)}
+
+/* Services */
+.services{background:var(--ivory)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{background:white;position:relative;overflow:hidden;cursor:pointer}
+.service-image{height:275px;overflow:hidden;background:#dfd0bc}
+.service-image img{height:100%;object-fit:cover;transition:transform .6s}
+.service-card:hover .service-image img{transform:scale(1.055)}
+.service-content{padding:22px 23px 25px;border-bottom:2px solid transparent;transition:.25s}
+.service-card:hover .service-content{border-bottom-color:var(--gold)}
+.service-number{font-size:9px;letter-spacing:2px;color:var(--brown)}
+.service-content h3{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:500;line-height:1.1;margin:8px 0}
+.service-content p{font-size:11px;color:var(--muted);line-height:1.8}
+.service-link{display:inline-block;margin-top:15px;color:var(--brown);font-size:10px;font-weight:700;letter-spacing:.8px}
+
+/* Signature work */
+.work-section{background:#fff}
+.work-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.work-large{height:550px;position:relative;overflow:hidden;background:#d7c2a6}
+.work-large img,.work-tile img{height:100%;object-fit:cover;transition:transform .55s}
+.work-large:hover img,.work-tile:hover img{transform:scale(1.04)}
+.work-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}
+.work-tile{min-height:260px;position:relative;overflow:hidden;background:#dfd0bc}
+.work-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(27,18,12,.84),transparent 65%);display:flex;flex-direction:column;justify-content:flex-end;padding:26px;color:white}
+.work-overlay span{font-size:9px;color:#e7c994;letter-spacing:1.8px;text-transform:uppercase}
+.work-overlay h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;line-height:1.1;margin-top:6px}
+
+/* About */
+.about{background:var(--dark);color:white}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-visual{height:520px;position:relative;background:#70543b}
+.about-visual img{height:100%;object-fit:cover}
+.about-visual:after{content:"";position:absolute;inset:15px -15px -15px 15px;border:1px solid #b59a72;pointer-events:none}
+.about-copy .eyebrow{color:var(--gold)}
+.about-copy h2{font-family:'Cormorant Garamond',serif;font-size:clamp(39px,4.5vw,56px);line-height:1.04;font-weight:500;margin:20px 0}
+.about-copy h2 em{color:var(--gold)}
+.about-copy p{font-size:12px;line-height:2;color:#c9bdb1;margin-bottom:14px}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:26px 0 30px}
+.about-point{border-top:1px solid #514034;padding-top:13px}
+.about-point strong{display:block;color:#f2e4d3;font-size:11px}
+.about-point span{font-size:10px;color:#b8a594}
+
+/* Process */
+.process{background:var(--ivory)}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.process-card{background:white;padding:28px;border:1px solid var(--line)}
+.process-no{font-family:'Cormorant Garamond',serif;font-size:41px;color:#c7a77c}
+.process-card h3{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500}
+.process-card p{font-size:11px;line-height:1.9;color:var(--muted);margin-top:8px}
+
+/* Gallery */
+.gallery{background:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery-item{height:280px;position:relative;overflow:hidden;background:var(--ivory);cursor:pointer}
+.gallery-item img{height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,#1e1510dc);padding:38px 17px 15px;color:white;font-family:'Cormorant Garamond',serif;font-size:22px}
+.gallery-note{text-align:center;color:var(--muted);font-size:10px;margin-top:20px}
+
+/* CTA */
+.cta{background:#76533b;color:white;padding:60px 0}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta .eyebrow{color:#f1d6a9}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,52px);line-height:1.05;font-weight:500;margin:13px 0}
+.cta p{font-size:12px;color:#e9d8c7}
+.cta .btn{background:var(--ivory);border-color:var(--ivory);flex-shrink:0}
+
+/* Contact */
+.contact{background:var(--ivory)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+.contact-copy h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;line-height:1.04;margin:18px 0}
+.contact-copy>p{font-size:12px;color:var(--muted);line-height:2}
+.contact-row{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-icon{width:40px;height:40px;display:grid;place-items:center;background:white;color:var(--brown);font-size:18px;flex-shrink:0}
+.contact-row strong{font-size:11px;display:block}
+.contact-row p,.contact-row a{font-size:11px;color:var(--muted);line-height:1.8}
+.contact-row a{color:var(--brown);font-weight:600}
+.contact-form{background:white;padding:32px;border:1px solid var(--line);box-shadow:0 10px 35px #4d38200b}
+.contact-form h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500}
+.contact-form>p{font-size:11px;color:var(--muted);margin-bottom:23px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{margin-bottom:14px}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:10px;font-weight:700;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid var(--line);background:#fdfbf8;font-size:12px;outline:none;color:var(--text)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brown)}
+.field textarea{min-height:95px;resize:vertical}
+.contact-form .btn{width:100%}
+
+/* FAQ */
+.faq{background:white}
+.faq-list{max-width:800px;margin:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;border:0;background:white;display:flex;justify-content:space-between;gap:20px;text-align:left;padding:20px 0;font-size:12px;font-weight:700;color:var(--text)}
+.faq-q span{color:var(--brown);font-size:20px}
+.faq-a{display:none;padding:0 25px 20px 0;font-size:11px;line-height:1.9;color:var(--muted)}
+.faq-item.open .faq-a{display:block}
+
+/* Footer */
+footer{background:#17110d;color:white;padding:48px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:32px}
+.footer-brand p{font-size:11px;line-height:2;color:#b9a99a;max-width:350px;margin-top:18px}
+.footer-col h4{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;margin-bottom:13px}
+.footer-col a{display:block;font-size:11px;color:#b9a99a;margin:9px 0}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #45362a;padding-top:18px;font-size:10px;color:#b9a99a}
+.footer-bottom a{color:var(--gold)}
+
+/* Floating actions */
+.floating{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;flex-direction:column;gap:9px}
+.float-btn{height:47px;width:47px;border-radius:50%;display:grid;place-items:center;border:0;color:white;font-size:19px;box-shadow:0 4px 15px #0003}
+.float-whatsapp{background:#218c50}
+.float-top{background:var(--dark)}
+
+/* Image viewer */
+.viewer{position:fixed;inset:0;background:#100c09ed;z-index:300;display:none;align-items:center;justify-content:center;padding:25px}
+.viewer.open{display:flex}
+.viewer img{max-width:min(1000px,95vw);max-height:85vh;width:auto;object-fit:contain}
+.viewer-close{position:absolute;right:24px;top:18px;background:none;color:white;border:0;font-size:34px}
+.viewer-caption{position:absolute;bottom:16px;left:10px;right:10px;text-align:center;color:#e8d4ba;font-size:11px}
+
+@media(max-width:950px){
+ .nav-links{gap:13px;font-size:11px}
+ .hero-grid{gap:28px}
+ .hero-gallery{height:440px}
+ .service-image{height:230px}
+ .work-large{height:470px}
+ .work-tile{min-height:225px}
+ .about-grid{gap:35px}
+ .gallery-item{height:230px}
+}
+@media(max-width:680px){
+ .container{width:92%}
+ .announcement{font-size:8px;letter-spacing:1.2px}
+ .nav{height:69px}
+ .brand-logo{width:41px;height:41px;font-size:27px}
+ .brand-name{font-size:23px}
+ .brand-sub{font-size:7px}
+ .menu-toggle{display:block}
+ .nav-links{display:none;position:absolute;left:0;right:0;top:69px;background:var(--dark);padding:14px 5%;border-bottom:1px solid #514034;flex-direction:column;align-items:stretch;gap:0}
+ .nav-links.open{display:flex}
+ .nav-links a{padding:12px 0;border-bottom:1px solid #403126}
+ .nav>.btn{display:none}
+ .hero-grid{grid-template-columns:1fr;padding-top:42px;padding-bottom:52px;gap:36px}
+ .hero h1{font-size:58px;margin:22px 0}
+ .hero-copy{font-size:12px}
+ .hero-gallery{height:360px;margin-right:8px}
+ .hero-image-caption{left:-7px;bottom:12px;padding:13px 16px}
+ .hero-image-caption strong{font-size:21px}
+ .hero-gallery:after{inset:9px -8px -9px 9px}
+ .hero-stats{gap:20px}
+ .trust-grid{grid-template-columns:1fr 1fr;gap:20px 10px}
+ .trust-item{justify-content:flex-start;gap:8px}
+ .trust-icon{width:33px;height:33px}
+ .trust-item strong{font-size:10px}
+ .trust-item small{font-size:8px}
+ .section{padding:60px 0}
+ .heading{margin-bottom:28px}
+ .heading h2{font-size:42px}
+ .service-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .service-image{height:180px}
+ .service-content{padding:14px 12px 17px}
+ .service-content h3{font-size:23px}
+ .service-content p{font-size:10px}
+ .service-link{font-size:9px}
+ .work-grid{grid-template-columns:1fr}
+ .work-large{height:390px}
+ .work-side{grid-template-rows:auto;grid-template-columns:1fr 1fr;gap:10px}
+ .work-tile{height:220px;min-height:0}
+ .work-overlay{padding:13px}
+ .work-overlay h3{font-size:23px}
+ .about-grid{grid-template-columns:1fr;gap:35px}
+ .about-visual{height:360px;margin-right:8px}
+ .about-copy h2{font-size:45px}
+ .about-points{gap:14px}
+ .process-grid{grid-template-columns:1fr;gap:12px}
+ .process-card{padding:22px}
+ .gallery-grid{grid-template-columns:1fr 1fr;gap:8px}
+ .gallery-item{height:210px}
+ .gallery-item span{font-size:19px;padding:32px 11px 11px}
+ .cta-inner{align-items:flex-start;flex-direction:column}
+ .cta h2{font-size:43px}
+ .contact-grid{grid-template-columns:1fr;gap:28px}
+ .contact-copy h2{font-size:44px}
+ .contact-form{padding:23px 17px}
+ .form-grid{grid-template-columns:1fr;gap:0}
+ .field.full{grid-column:auto}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:25px 16px}
+ .footer-brand{grid-column:1/-1}
+ .footer-bottom{flex-direction:column}
+ .floating{right:11px;bottom:11px}
+ .float-btn{width:43px;height:43px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">Handcrafted Stone Art &nbsp; · &nbsp; Manufacturing + Installation &nbsp; · &nbsp; Pan India Service</div>
+
+<header>
+ <div class="container nav">
+  <a class="brand" href="#home">
+   <div class="brand-logo">K</div>
+   <div><div class="brand-name">Krishna Stone Craft</div><div class="brand-sub">The Art of Natural Stone</div></div>
+  </a>
+  <nav class="nav-links" id="navLinks">
+   <a href="#home">Home</a><a href="#services">Our Craft</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn" href="#contact">Discuss Your Project ↗</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">Architectural stone craftsmanship</div>
+   <h1>Stone.<br>Shaped into<br><em>Timeless Art.</em></h1>
+   <p class="hero-copy">From beautifully carved mandirs to statement stone murals, wall inlays and architectural cladding, we bring stone designs to life through detailed craftsmanship and professional installation.</p>
+   <div class="hero-actions">
+    <a class="btn" href="#projects">Explore Our Work ↗</a>
+    <a class="btn btn-outline" href="#contact">Start an Enquiry</a>
+   </div>
+   <div class="hero-stats">
+    <div class="stat"><strong>Mandir</strong><span>CARVED DESIGNS</span></div>
+    <div class="stat"><strong>Inlay</strong><span>DECORATIVE DETAIL</span></div>
+    <div class="stat"><strong>Pan India</strong><span>SERVICE COVERAGE</span></div>
+   </div>
+  </div>
+
+  <div class="hero-gallery">
+   <img class="hero-main" id="heroImage" src="https://revoi-english.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/11/07213906/173097594594114375451.1730971630905_content_img.jpeg" alt="Intricately carved Indian sandstone temple architecture" fetchpriority="high">
+   <div class="hero-counter" id="heroCounter">01 / 05</div>
+   <div class="hero-image-caption"><small>Made to leave a legacy</small><strong>Craftsmanship in Every Carve</strong></div>
+   <div class="hero-arrows"><button id="heroPrev" aria-label="Previous image">←</button><button id="heroNext" aria-label="Next image">→</button></div>
+  </div>
+ </div>
+</section>
+
+<section class="trust">
+ <div class="container trust-grid">
+  <div class="trust-item"><div class="trust-icon">✧</div><div><strong>Intricate Stone Work</strong><small>Details that stand out</small></div></div>
+  <div class="trust-item"><div class="trust-icon">⌂</div><div><strong>Mandir & Architecture</strong><small>Tradition meets design</small></div></div>
+  <div class="trust-item"><div class="trust-icon">◇</div><div><strong>Manufacturing</strong><small>From concept to creation</small></div></div>
+  <div class="trust-item"><div class="trust-icon">↗</div><div><strong>Installation</strong><small>Pan India service</small></div></div>
+ </div>
+</section>
+
+<section class="section services" id="services">
+ <div class="container">
+  <div class="heading"><div class="eyebrow">What we create</div><h2>Crafted in Stone.<br>Designed to Inspire.</h2><p>Explore stonework for sacred spaces, statement walls, distinctive interiors and architectural projects.</p></div>
+  <div class="service-grid">
+   <article class="service-card" data-filter-link="Mandir">
+    <div class="service-image"><img src="https://in.pinterest.com/pin/690528555346765409/" alt="Traditional sandstone temple architecture" loading="lazy" onerror="this.src='https://revoi-english.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/11/07213906/173097594594114375451.1730971630905_content_img.jpeg'"></div>
+    <div class="service-content"><span class="service-number">01 / SACRED ARCHITECTURE</span><h3>Stone Mandir</h3><p>Traditional temple-inspired forms, carved details and elegant sacred spaces.</p><a class="service-link" href="#gallery">EXPLORE THE CRAFT ↗</a></div>
+   </article>
+   <article class="service-card" data-filter-link="Wall Inlay">
+    <div class="service-image"><img src="https://www.shailartworld.com/web/image/1128-3d0897d7/WhatsApp%20Image%202026-01-29%20at%2013.05.02%20%281%29.webp" alt="Luxurious carved stone wall and decorative niches" loading="lazy"></div>
+    <div class="service-content"><span class="service-number">02 / DECORATIVE DETAIL</span><h3>Stone Inlay</h3><p>Artistic stone detailing and decorative compositions for distinctive interiors.</p><a class="service-link" href="#gallery">EXPLORE THE CRAFT ↗</a></div>
+   </article>
+   <article class="service-card" data-filter-link="Wall Designs">
+    <div class="service-image"><img src="https://s.alicdn.com/%40sc04/kf/Hf5bda4a47bc6431480d78a40a44d8730H/Strong-in-Bearing-Durable-Sandstone-Blocks-for-Carving-Sandstone-Paving-Sandstone-Tiles.jpg" alt="Sculpted sandstone mural with raised floral relief" loading="lazy"></div>
+    <div class="service-content"><span class="service-number">03 / ARTISTIC SURFACES</span><h3>Wall Designs</h3><p>Textured reliefs, decorative panels and sculptural focal walls.</p><a class="service-link" href="#gallery">EXPLORE THE CRAFT ↗</a></div>
+   </article>
+   <article class="service-card" data-filter-link="Cladding">
+    <div class="service-image"><img src="https://assets.simplotel.com/simplotel/image/upload/x_0%2Cy_53%2Cw_1024%2Ch_576%2Cr_0%2Cc_crop%2Cq_80%2Cfl_progressive/w_900%2Cf_auto%2Cc_fit/sairafort-sarovar-portico-jaisalmer/Entrance_Courtyard_at_Sairafort_Sarovar_Portico_Jaisalmer_2_Hotel_Palace_in_Jaisalmer" alt="Warm sandstone wall cladding and architectural arches" loading="lazy"></div>
+    <div class="service-content"><span class="service-number">04 / ARCHITECTURAL FINISH</span><h3>Stone Cladding</h3><p>Natural stone surfaces that add warmth, depth and architectural character.</p><a class="service-link" href="#gallery">EXPLORE THE CRAFT ↗</a></div>
+   </article>
+   <article class="service-card" data-filter-link="Stone Mural">
+    <div class="service-image"><img src="https://cpimg.tistatic.com/8385964/b/4/sand-stone-water-fountains.jpg" alt="Carved sandstone lion fountain wall detail" loading="lazy"></div>
+    <div class="service-content"><span class="service-number">05 / SCULPTURAL ART</span><h3>Stone Murals</h3><p>Expressive carved motifs, sculptural artwork and decorative stone features.</p><a class="service-link" href="#gallery">EXPLORE THE CRAFT ↗</a></div>
+   </article>
+   <article class="service-card" data-filter-link="Sculptures">
+    <div class="service-image"><img src="https://www.nativeplanet.com/photos/929x523x90/2018/08/photo-91-170631-1.jpg" alt="Detailed stone-carved temple relief sculptures" loading="lazy"></div>
+    <div class="service-content"><span class="service-number">06 / FINE CRAFT</span><h3>Stone Sculptures</h3><p>Artisan-inspired stone figures and detailed sculptural compositions.</p><a class="service-link" href="#gallery">EXPLORE THE CRAFT ↗</a></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section work-section" id="projects">
+ <div class="container">
+  <div class="heading"><div class="eyebrow">A closer look at our craft</div><h2>Stonework That Makes a Statement</h2><p>Explore architectural inspirations aligned with the mandir, mural, cladding and decorative stonework shown on the brand's Instagram profile.</p></div>
+  <div class="work-grid">
+   <div class="work-large"><img src="https://revoi-english.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/11/07213906/173097594594114375451.1730971630905_content_img.jpeg" alt="Large traditional carved sandstone temple" loading="lazy"><div class="work-overlay"><span>Traditional craftsmanship</span><h3>Temple Architecture<br>in Natural Stone</h3></div></div>
+   <div class="work-side">
+    <div class="work-tile"><img src="https://www.shailartworld.com/web/image/1128-3d0897d7/WhatsApp%20Image%202026-01-29%20at%2013.05.02%20%281%29.webp" alt="Decorative carved stone wall in a premium living space" loading="lazy"><div class="work-overlay"><span>Interior detailing</span><h3>Carved Feature Walls</h3></div></div>
+    <div class="work-tile"><img src="https://cpimg.tistatic.com/8385964/b/4/sand-stone-water-fountains.jpg" alt="Ornate sandstone lion-head fountain" loading="lazy"><div class="work-overlay"><span>Stone artistry</span><h3>Sculptural Water Features</h3></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div class="container about-grid">
+  <div class="about-visual"><img src="https://s.alicdn.com/%40sc04/kf/Hf5bda4a47bc6431480d78a40a44d8730H/Strong-in-Bearing-Durable-Sandstone-Blocks-for-Carving-Sandstone-Paving-Sandstone-Tiles.jpg" alt="Detailed stone relief carving and architectural craftsmanship" loading="lazy"></div>
+  <div class="about-copy">
+   <div class="eyebrow">About Krishna Stone Craft</div>
+   <h2>From Natural Stone to <em>Living Art.</em></h2>
+   <p>Krishna Stone Craft specialises in mandir work, stone inlay, wall designs, cladding and stone murals. The Instagram profile highlights sculptural features, decorative stone surfaces, carved sacred spaces and architectural installations.</p>
+   <p>With manufacturing and installation services and Pan India coverage stated in the profile, the brand can be approached for stonework requirements across a variety of spaces.</p>
+   <div class="about-points">
+    <div class="about-point"><strong>Mandir Work</strong><span>Detailed sacred architecture</span></div>
+    <div class="about-point"><strong>Wall Inlay & Murals</strong><span>Decorative stone artistry</span></div>
+    <div class="about-point"><strong>Manufacturing</strong><span>Stonework production</span></div>
+    <div class="about-point"><strong>Installation</strong><span>Pan India service</span></div>
+   </div>
+   <a class="btn" href="#contact">Discuss Your Requirements ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="section process">
+ <div class="container">
+  <div class="heading"><div class="eyebrow">From idea to installation</div><h2>Your Project, Step by Step</h2><p>A clear enquiry process for discussing a custom stonework requirement.</p></div>
+  <div class="process-grid">
+   <article class="process-card"><div class="process-no">01</div><h3>Share Your Vision</h3><p>Tell us whether your project involves a mandir, stone inlay, cladding, wall design or mural.</p></article>
+   <article class="process-card"><div class="process-no">02</div><h3>Discuss the Design</h3><p>Share dimensions, reference photos, preferred stone finishes and installation location.</p></article>
+   <article class="process-card"><div class="process-no">03</div><h3>Plan Your Project</h3><p>Contact the team to discuss feasibility, quotation, manufacturing and installation arrangements.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section gallery" id="gallery">
+ <div class="container">
+  <div class="heading"><div class="eyebrow">Visual inspiration</div><h2>The Stone Craft Gallery</h2><p>Explore stone architecture, sculptural work, carved panels and decorative surfaces.</p></div>
+  <div class="gallery-grid">
+   <div class="gallery-item"><img src="https://revoi-english.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/11/07213906/173097594594114375451.1730971630905_content_img.jpeg" alt="Carved sandstone temple" loading="lazy"><span>Carved Mandir</span></div>
+   <div class="gallery-item"><img src="https://www.shailartworld.com/web/image/1128-3d0897d7/WhatsApp%20Image%202026-01-29%20at%2013.05.02%20%281%29.webp" alt="Stone feature wall" loading="lazy"><span>Stone Wall Design</span></div>
+   <div class="gallery-item"><img src="https://cpimg.tistatic.com/8385964/b/4/sand-stone-water-fountains.jpg" alt="Lion-head sandstone fountain" loading="lazy"><span>Stone Fountain</span></div>
+   <div class="gallery-item"><img src="https://www.nativeplanet.com/photos/929x523x90/2018/08/photo-91-170631-1.jpg" alt="Ornate temple stone relief" loading="lazy"><span>Intricate Carvings</span></div>
+   <div class="gallery-item"><img src="https://assets.simplotel.com/simplotel/image/upload/x_0%2Cy_53%2Cw_1024%2Ch_576%2Cr_0%2Cc_crop%2Cq_80%2Cfl_progressive/w_900%2Cf_auto%2Cc_fit/sairafort-sarovar-portico-jaisalmer/Entrance_Courtyard_at_Sairafort_Sarovar_Portico_Jaisalmer_2_Hotel_Palace_in_Jaisalmer" alt="Sandstone architectural wall" loading="lazy"><span>Stone Cladding</span></div>
+   <div class="gallery-item"><img src="https://s.alicdn.com/%40sc04/kf/Hf5bda4a47bc6431480d78a40a44d8730H/Strong-in-Bearing-Durable-Sandstone-Blocks-for-Carving-Sandstone-Paving-Sandstone-Tiles.jpg" alt="Raised floral stone mural" loading="lazy"><span>Stone Mural</span></div>
+  </div>
+  <p class="gallery-note">Images are visual references from external sources, not verified photographs of Krishna Stone Craft's own completed projects.</p>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="container cta-inner">
+  <div><div class="eyebrow">Bring your idea to life</div><h2>Have a Stonework Project in Mind?</h2><p>Share your concept and discuss the next steps with Krishna Stone Craft.</p></div>
+  <a class="btn" href="#contact">Enquire About Your Project ↗</a>
+ </div>
+</section>
+
+<section class="section faq">
+ <div class="container">
+  <div class="heading"><div class="eyebrow">Good to know</div><h2>Frequently Asked Questions</h2><p>Useful information before starting your stonework enquiry.</p></div>
+  <div class="faq-list">
+   <div class="faq-item open"><button class="faq-q" aria-expanded="true">What services does Krishna Stone Craft offer?<span>−</span></button><div class="faq-a">The Instagram profile lists Mandir, Inlay, Wall Designs, Cladding and Stone Mural, along with manufacturing and installation services.</div></div>
+   <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you provide service across India?<span>+</span></button><div class="faq-a">The profile states PAN INDIA SERVICE. Confirm project location, installation availability and logistics directly with the business.</div></div>
+   <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I enquire about a customised mandir or mural?<span>+</span></button><div class="faq-a">You can send your reference image, dimensions and project details through the enquiry form to discuss your requirements.</div></div>
+   <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get a quotation?<span>+</span></button><div class="faq-a">Call the number shown on the Instagram profile or send your requirements through the WhatsApp enquiry form on this page.</div></div>
+   <div class="faq-item"><button class="faq-q" aria-expanded="false">Are the gallery photographs actual company projects?<span>+</span></button><div class="faq-a">No. This preview uses relevant external stonework reference images to establish the design direction. Replace them with the brand's original project photographs before publishing.</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container contact-grid">
+  <div class="contact-copy">
+   <div class="eyebrow">Let's create something remarkable</div>
+   <h2>Tell Us About Your Project.</h2>
+   <p>Have a mandir, stone mural, cladding or wall inlay requirement? Send your details to start a conversation.</p>
+   <div class="contact-row"><div class="contact-icon">☎</div><div><strong>Call Krishna Stone Craft</strong><a href="tel:+919672739036">+91 96727 39036</a></div></div>
+   <div class="contact-row"><div class="contact-icon">◎</div><div><strong>Instagram</strong><a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">@krishnastonecraft ↗</a></div></div>
+   <div class="contact-row"><div class="contact-icon">⌂</div><div><strong>Service Coverage</strong><p>Pan India — as stated in the business profile</p></div></div>
+  </div>
+
+  <form class="contact-form" id="contactForm">
+   <h3>Start an Enquiry</h3><p>Share your details and continue the conversation on WhatsApp.</p>
+   <div class="form-grid">
+    <div class="field"><label for="name">Full Name *</label><input id="name" required placeholder="Your name"></div>
+    <div class="field"><label for="phone">Your Phone *</label><input id="phone" required type="tel" placeholder="Your contact number"></div>
+    <div class="field full"><label for="service">Service Required *</label>
+     <select id="service" required>
+      <option value="">Choose a service</option>
+      <option>Stone Mandir</option><option>Stone Inlay</option><option>Wall Designs</option><option>Stone Cladding</option><option>Stone Mural</option><option>Stone Sculptures</option><option>Other Custom Stonework</option>
+     </select>
+    </div>
+    <div class="field full"><label for="location">Project City / State</label><input id="location" placeholder="Where is the project located?"></div>
+    <div class="field full"><label for="message">Project Details *</label><textarea id="message" required placeholder="Describe the design, dimensions, stone type and installation requirements"></textarea></div>
+   </div>
+   <button class="btn" type="submit">Send Enquiry on WhatsApp ↗</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <a class="brand" href="#home"><div class="brand-logo">K</div><div><div class="brand-name">Krishna Stone Craft</div><div class="brand-sub">The Art of Natural Stone</div></div></a>
+    <p>Mandir, stone inlay, wall designs, cladding and stone murals. Manufacturing and installation services with Pan India coverage stated on the brand profile.</p>
+   </div>
+   <div class="footer-col"><h4>Explore</h4><a href="#services">Our Craft</a><a href="#projects">Projects</a><a href="#about">About Us</a><a href="#gallery">Gallery</a></div>
+   <div class="footer-col"><h4>Contact</h4><a href="tel:+919672739036">+91 96727 39036</a><a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">Instagram ↗</a><a href="#contact">Project Enquiry</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> Krishna Stone Craft. All rights reserved.</span><span>Designed by <a href="#home">Marwar Infotech</a></span></div>
+ </div>
+</footer>
+
+<div class="floating">
+ <a class="float-btn float-whatsapp" href="https://wa.me/919672739036" target="_blank" rel="noopener" aria-label="WhatsApp Krishna Stone Craft">✆</a>
+ <button class="float-btn float-top" id="backTop" aria-label="Back to top">↑</button>
+</div>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Gallery image">
+ <button class="viewer-close" id="viewerClose" aria-label="Close image">×</button>
+ <img id="viewerImage" src="" alt="">
+ <div class="viewer-caption" id="viewerCaption"></div>
+</div>
+
+<script>
+(() => {
+ "use strict";
+
+ const phoneNumber = "919672739036";
+
+ // Responsive mobile menu
+ const menu = document.getElementById("menuToggle");
+ const nav = document.getElementById("navLinks");
+
+ menu.addEventListener("click", () => {
+   const open = nav.classList.toggle("open");
+   menu.setAttribute("aria-expanded", String(open));
+   menu.textContent = open ? "×" : "☰";
+ });
+
+ nav.querySelectorAll("a").forEach(link => {
+   link.addEventListener("click", () => {
+     nav.classList.remove("open");
+     menu.setAttribute("aria-expanded", "false");
+     menu.textContent = "☰";
+   });
+ });
+
+ // Hero slider — relevant architectural stone images
+ const slides = [
+   {
+     src: "https://revoi-english.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/11/07213906/173097594594114375451.1730971630905_content_img.jpeg",
+     alt: "Traditional intricately carved sandstone temple"
+   },
+   {
+     src: "https://www.shailartworld.com/web/image/1128-3d0897d7/WhatsApp%20Image%202026-01-29%20at%2013.05.02%20%281%29.webp",
+     alt: "Decorative carved stone wall in a luxury interior"
+   },
+   {
+     src: "https://cpimg.tistatic.com/8385964/b/4/sand-stone-water-fountains.jpg",
+     alt: "Carved sandstone lion-head water feature"
+   },
+   {
+     src: "https://www.nativeplanet.com/photos/929x523x90/2018/08/photo-91-170631-1.jpg",
+     alt: "Detailed traditional stone temple carvings"
+   },
+   {
+     src: "https://assets.simplotel.com/simplotel/image/upload/x_0%2Cy_53%2Cw_1024%2Ch_576%2Cr_0%2Cc_crop%2Cq_80%2Cfl_progressive/w_900%2Cf_auto%2Cc_fit/sairafort-sarovar-portico-jaisalmer/Entrance_Courtyard_at_Sairafort_Sarovar_Portico_Jaisalmer_2_Hotel_Palace_in_Jaisalmer",
+     alt: "Warm sandstone arches and architectural detailing"
+   }
+ ];
+
+ let slideIndex = 0;
+ const heroImg = document.getElementById("heroImage");
+ const counter = document.getElementById("heroCounter");
+ const hero = document.querySelector(".hero-gallery");
+ let sliderTimer;
+
+ function showSlide(index) {
+   slideIndex = (index + slides.length) % slides.length;
+   heroImg.style.opacity = ".35";
+   const next = new Image();
+   next.onload = () => {
+     heroImg.src = slides[slideIndex].src;
+     heroImg.alt = slides[slideIndex].alt;
+     heroImg.style.opacity = "1";
+   };
+   next.onerror = () => { heroImg.style.opacity = "1"; };
+   next.src = slides[slideIndex].src;
+   counter.textContent =
+     String(slideIndex + 1).padStart(2, "0") + " / " +
+     String(slides.length).padStart(2, "0");
+ }
+
+ function startSlider() {
+   clearInterval(sliderTimer);
+   sliderTimer = setInterval(() => showSlide(slideIndex + 1), 5500);
+ }
+
+ document.getElementById("heroPrev").addEventListener("click", () => {
+   showSlide(slideIndex - 1);
+   startSlider();
+ });
+ document.getElementById("heroNext").addEventListener("click", () => {
+   showSlide(slideIndex + 1);
+   startSlider();
+ });
+ hero.addEventListener("mouseenter", () => clearInterval(sliderTimer));
+ hero.addEventListener("mouseleave", startSlider);
+ startSlider();
+
+ // Service cards jump to enquiry with a selected service
+ document.querySelectorAll("[data-filter-link]").forEach(card => {
+   card.addEventListener("click", event => {
+     if (event.target.closest("a")) return;
+     const select = document.getElementById("service");
+     const serviceName = card.dataset.filterLink;
+     const option = [...select.options].find(o => o.textContent === serviceName);
+     if (option) select.value = option.value;
+     document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+   });
+ });
+
+ // FAQ accordion
+ document.querySelectorAll(".faq-q").forEach(button => {
+   button.addEventListener("click", () => {
+     const item = button.closest(".faq-item");
+     const open = item.classList.toggle("open");
+     button.setAttribute("aria-expanded", String(open));
+     button.querySelector("span").textContent = open ? "−" : "+";
+   });
+ });
+
+ // Full-screen gallery image viewer
+ const viewer = document.getElementById("viewer");
+ const viewerImage = document.getElementById("viewerImage");
+ const viewerCaption = document.getElementById("viewerCaption");
+
+ document.querySelectorAll(".gallery-item").forEach(item => {
+   item.addEventListener("click", () => {
+     const img = item.querySelector("img");
+     viewerImage.src = img.src;
+     viewerImage.alt = img.alt;
+     viewerCaption.textContent = item.querySelector("span").textContent;
+     viewer.classList.add("open");
+     document.body.style.overflow = "hidden";
+   });
+ });
+
+ function closeViewer() {
+   viewer.classList.remove("open");
+   document.body.style.overflow = "";
+ }
+ document.getElementById("viewerClose").addEventListener("click", closeViewer);
+ viewer.addEventListener("click", event => {
+   if (event.target === viewer) closeViewer();
+ });
+ document.addEventListener("keydown", event => {
+   if (event.key === "Escape") closeViewer();
+ });
+
+ // Enquiry form -> WhatsApp
+ document.getElementById("contactForm").addEventListener("submit", event => {
+   event.preventDefault();
+
+   const name = document.getElementById("name").value.trim();
+   const phone = document.getElementById("phone").value.trim();
+   const service = document.getElementById("service").value;
+   const location = document.getElementById("location").value.trim();
+   const message = document.getElementById("message").value.trim();
+
+   if (!name || !phone || !service || !message) {
+     alert("Please fill in all required fields.");
+     return;
+   }
+
+   const digits = phone.replace(/\D/g, "");
+   if (digits.length < 7 || digits.length > 15) {
+     alert("Please enter a valid phone number.");
+     return;
+   }
+
+   const text =
+     "Hello Krishna Stone Craft,\n\n" +
+     "I would like to enquire about a stonework project.\n\n" +
+     "Name: " + name + "\n" +
+     "Contact: " + phone + "\n" +
+     "Service: " + service + "\n" +
+     "Project Location: " + (location || "Not specified") + "\n" +
+     "Project Details: " + message + "\n\n" +
+     "Please contact me to discuss the requirements.";
+
+   window.open(
+     "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(text),
+     "_blank",
+     "noopener,noreferrer"
+   );
+ });
+
+ document.getElementById("backTop").addEventListener("click", () => {
+   window.scrollTo({top:0,behavior:"smooth"});
+ });
+
+ document.getElementById("year").textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
