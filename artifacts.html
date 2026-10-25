@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="theme-color" content="#17110d">
-<meta name="description" content="Krishna Stone Craft — Stone Artifacts Gallery. Distinctive handcrafted natural stone artifacts including ornate floral urns, carved stone planters, traditional heritage pillars, jali lamps, decorative pedestals and estate entryway accent pieces that bring timeless elegance to architecture.">
-<title>Stone Artifacts Gallery | Krishna Stone Craft</title>
+<meta name="description" content="Distinctive handcrafted natural stone artifacts including ornate floral urns, carved stone planters, traditional heritage pillars, jali lamps, and estate entryway accent pieces.">
+<title>Heritage Stone Artifacts, Urns & Planters | Krishna Stone Craft</title>
+<meta property="og:title" content="Heritage Stone Artifacts, Urns & Planters | Krishna Stone Craft">
+<meta property="og:description" content="Distinctive handcrafted natural stone artifacts including ornate floral urns, carved stone planters, traditional heritage pillars, jali lamps, and estate entryway accent pieces.">
+<meta property="og:image" content="assets/logo/logo.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/jpeg" href="assets/logo/logo.jpg">
-  <link rel="apple-touch-icon" href="assets/logo/logo.jpg">
+  <!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -658,6 +665,121 @@ footer {
   .category-hero h1 { font-size: 34px; }
   .photo-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
 }
+
+/* Mobile Navigation & Responsive Overflow Controls */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+.menu-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 9, 6, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+.mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-close-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+}
+.mobile-links a {
+  font-size: 15px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  color: #f7f1e8;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.mobile-links a:hover {
+  background: rgba(216, 183, 126, 0.1);
+  color: var(--gold);
+}
+.mobile-contact-group {
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Floating Quick Actions */
+.floating {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.float-btn {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  cursor: pointer;
+  text-decoration: none;
+}
+.float-whatsapp { background: #25d366; }
+.float-call { background: #1d4ed8; }
+.float-top { background: var(--cardstone); border: 1px solid var(--line); }
+
+@media (max-width: 850px) {
+  .nav-links, .btn-header-cta { display: none; }
+  .menu-toggle { display: inline-flex; }
+  .floating { right: 12px; bottom: 12px; }
+  .float-btn { width: 42px; height: 42px; font-size: 16px; }
+}
+
 </style>
 </head>
 <body>
@@ -666,7 +788,7 @@ footer {
 
 <header>
   <div class="container nav">
-    <a class="brand" href="index.html">
+    <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home">
       <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
       <div>
         <div class="brand-name">KRISHNA</div>
@@ -683,8 +805,46 @@ footer {
     <a class="btn-header-cta" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%20I%20am%20inquiring%20about%20your%20Stone%20Artifacts%20division." target="_blank" rel="noopener noreferrer">
       Discuss Project ↗
     </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </div>
 </header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div class="mobile-drawer-header">
+    <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home">
+      <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo" style="width:40px;height:40px;">
+      <div>
+        <div class="brand-name" style="font-size:20px;">Krishna Stone Craft</div>
+        <div class="brand-sub" style="font-size:7px;">The Art of Natural Stone</div>
+      </div>
+    </a>
+    <button type="button" class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html#home">Home Page</a>
+    <a href="index.html#services">All 10 Craft Divisions</a>
+    <a href="mandir.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 01. Stone Mandir</a>
+    <a href="god-idols.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 02. God Idols &amp; Murtis</a>
+    <a href="double-height-wall.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 03. Double Height Wall</a>
+    <a href="landscape.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 04. Stone Landscape</a>
+    <a href="marble-inlay-work.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 05. Marble Inlay Work</a>
+    <a href="stone-cladding.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 06. Stone Cladding</a>
+    <a href="wall-mural.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 07. Stone Wall Murals</a>
+    <a href="stone-wall-design.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 08. Stone Wall Design</a>
+    <a href="stone-and-sculptures.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 09. Stone &amp; Sculptures</a>
+    <a href="artifacts.html" style="padding-left:24px;font-size:13px;color:var(--gold);">↳ 10. Stone Artifacts</a>
+    <a href="index.html#projects">Signature Projects</a>
+    <a href="index.html#gallery">Craft Showcase Videos</a>
+    <a href="index.html#contact">Contact &amp; Custom Quote</a>
+  </div>
+  <div class="mobile-contact-group">
+    <a class="btn-header-cta" style="width:100%;text-align:center;justify-content:center;padding:12px;" href="tel:+919672739036">☎ Call +91 96727 39036</a>
+    <a class="btn-header-cta" style="width:100%;text-align:center;justify-content:center;padding:12px;background:rgba(255,255,255,0.06);color:#fff;border:1px solid var(--line);" href="mailto:krishnastonecraft@gmail.com">✉ krishnastonecraft@gmail.com</a>
+    <a class="btn-header-cta" style="width:100%;text-align:center;justify-content:center;padding:12px;background:#25d366;color:#fff;" href="https://wa.me/919672739036" target="_blank" rel="noopener">WhatsApp Inquiries ↗</a>
+  </div>
+</div>
+
 
 <main>
   <!-- Hero Section -->
@@ -976,7 +1136,7 @@ footer {
     </div>
     <div class="lightbox-footer">
       <span class="lightbox-counter" id="lightboxCounter">1 / 5</span>
-      <a href="#" id="lightboxInquire" target="_blank" rel="noopener noreferrer" class="lightbox-inquire-btn">
+      <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%20I%20am%20inquiring%20about%20your%20Heritage%20Stone%20Artifacts%2C%20Urns%20%26%20Planters." id="lightboxInquire" target="_blank" rel="noopener noreferrer" class="lightbox-inquire-btn">
         Enquire On WhatsApp ↗
       </a>
     </div>
@@ -987,7 +1147,7 @@ footer {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="index.html" style="margin-bottom: 14px; display: inline-flex;">
+        <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home" style="margin-bottom: 14px; display: inline-flex;">
           <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
           <div>
             <div class="brand-name" style="font-size: 20px;">Krishna Stone Craft</div>
@@ -999,24 +1159,28 @@ footer {
       <div class="footer-col">
         <h5>Craft Specialisations</h5>
         <a href="mandir.html">Stone Mandir</a>
-        <a href="god-idols.html">God Idols</a>
+        <a href="god-idols.html">God Idols &amp; Murtis</a>
         <a href="double-height-wall.html">Double Height Wall</a>
         <a href="landscape.html">Stone Landscape</a>
         <a href="marble-inlay-work.html">Marble Inlay Work</a>
         <a href="stone-cladding.html">Stone Cladding</a>
+        <a href="wall-mural.html">Stone Wall Murals</a>
+        <a href="stone-wall-design.html">Stone Wall Design</a>
+        <a href="stone-and-sculptures.html">Stone &amp; Sculptures</a>
+        <a href="artifacts.html">Stone Artifacts</a>
       </div>
       <div class="footer-col">
-        <h5>Quick Links</h5>
-        <a href="index.html#home">Home Page</a>
-        <a href="index.html#services">What We Create</a>
-        <a href="index.html#projects">Signature Projects</a>
-        <a href="index.html#gallery">Craft Videos</a>
-        <a href="index.html#contact">Discuss Project</a>
+        <h5>Direct Contact</h5>
+        <a href="tel:+919672739036">☎ +91 96727 39036</a>
+        <a href="mailto:krishnastonecraft@gmail.com">✉ krishnastonecraft@gmail.com</a>
+        <a href="https://wa.me/919672739036" target="_blank" rel="noopener noreferrer">WhatsApp Inquiries ↗</a>
+        <a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener noreferrer">Instagram @krishnastonecraft ↗</a>
+        <a href="index.html#contact">Discuss Your Project ↗</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 Krishna Stone Craft. All rights reserved.</div>
-      <div>Handcrafted in Rajasthan · Installed Pan India</div>
+      <div>&copy; <span id="year">2026</span> Krishna Stone Craft. All rights reserved.</div>
+      <div>Architectural Stone Craftsmanship · Pan India Service</div>
     </div>
   </div>
 </footer>
@@ -1097,6 +1261,54 @@ footer {
     if (e.key === 'ArrowRight') showLightbox(currentIndex + 1);
   });
 })();
+</script>
+
+<!-- Floating Quick Actions -->
+<div class="floating">
+  <a class="float-btn float-whatsapp" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Krishna Stone Craft">💬</a>
+  <a class="float-btn float-call" href="tel:+919672739036" aria-label="Call Krishna Stone Craft">☎</a>
+  <button type="button" class="float-btn float-top" id="subBackTop" aria-label="Back to top">↑</button>
+</div>
+
+<script>
+
+  // Mobile drawer controls
+  const subMenuToggle = document.getElementById('menuToggle');
+  const subMobileDrawer = document.getElementById('mobileDrawer');
+  const subMobileClose = document.getElementById('mobileCloseBtn');
+
+  function openSubMenu() {
+    if (!subMobileDrawer) return;
+    subMobileDrawer.classList.add('open');
+    if (subMenuToggle) subMenuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSubMenu() {
+    if (!subMobileDrawer) return;
+    subMobileDrawer.classList.remove('open');
+    if (subMenuToggle) subMenuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (subMenuToggle) subMenuToggle.addEventListener('click', openSubMenu);
+  if (subMobileClose) subMobileClose.addEventListener('click', closeSubMenu);
+  if (subMobileDrawer) {
+    subMobileDrawer.querySelectorAll('.mobile-links a').forEach(a => a.addEventListener('click', closeSubMenu));
+  }
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeSubMenu(); });
+
+  // Back to top button
+  const subBackTop = document.getElementById('subBackTop');
+  if (subBackTop) {
+    subBackTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Dynamic Year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 </script>
 </body>
 </html>

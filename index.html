@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="theme-color" content="#211914">
-<meta name="description" content="Krishna Stone Craft — Authentic Stone Mandir, Double Height Wall, Stone Inlay, Cladding, Wall Murals, Sculptures and Architectural Stone Craftsmanship. Manufacturing & Installation across India.">
-<title>Krishna Stone Craft | Architectural Stone Art & Manufacturing</title>
+<meta name="description" content="Krishna Stone Craft — Direct manufacturers and turnkey installers of authentic hand-carved stone mandirs, god idols, double height walls, marble inlay, cladding, murals and sculptures across India.">
+<meta property="og:title" content="Krishna Stone Craft | Luxury Architectural Stonework & Marble Inlay India">
+<meta property="og:description" content="Direct manufacturers and turnkey installers of authentic hand-carved stone mandirs, god idols, double height walls, marble inlay, cladding, murals and sculptures across India.">
+<meta property="og:image" content="assets/logo/logo.jpg">
+<meta property="og:type" content="website">
+<title>Krishna Stone Craft | Luxury Architectural Stonework & Marble Inlay India</title>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" type="image/jpeg" href="assets/logo/logo.jpg">
-<link rel="apple-touch-icon" href="assets/logo/logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -27,8 +36,28 @@
   --line:#e6d8c7;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.65}
+html{scroll-behavior:smooth;scroll-padding-top:85px;width:100%;max-width:100vw;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.65;width:100%;max-width:100vw;overflow-x:hidden;position:relative}
+
+/* Mobile Nav Drawer */
+.mobile-drawer{position:fixed;inset:0;background:rgba(14,9,6,.98);backdrop-filter:blur(20px);z-index:999;display:flex;flex-direction:column;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s ease;overflow-y:auto}
+.mobile-drawer.open{opacity:1;pointer-events:auto}
+.mobile-drawer-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid rgba(216,183,126,.2)}
+.mobile-close-btn{background:none;border:1px solid rgba(216,183,126,.3);color:#fff;width:40px;height:40px;border-radius:6px;font-size:22px;display:grid;place-items:center;cursor:pointer}
+.mobile-links{display:flex;flex-direction:column;gap:4px;margin-top:20px}
+.mobile-links a{font-size:15px;padding:11px 14px;border-radius:8px;color:#f7f1e8;border-bottom:1px solid rgba(255,255,255,.04);transition:.2s}
+.mobile-links a:hover{background:rgba(216,183,126,.1);color:var(--gold)}
+.mobile-contact-group{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:10px}
+
+/* Form Feedback & Error states */
+.form-feedback{padding:14px 18px;border-radius:8px;margin:16px 0;font-size:13px;line-height:1.6;display:flex;align-items:flex-start;gap:12px;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.form-feedback.error{background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.45);color:#fca5a5}
+.form-feedback.success{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.45);color:#86efac}
+.form-feedback-icon{font-size:20px;flex-shrink:0;line-height:1}
+.field input.is-invalid,.field select.is-invalid,.field textarea.is-invalid{border-color:#ef4444!important;box-shadow:0 0 0 2px rgba(239,68,68,.3)!important}
+.contact-row a.contact-link:hover{color:var(--gold)}
+.float-call{background:#1d4ed8}
 img{width:100%;display:block}
 a{text-decoration:none;color:inherit}
 button,input,textarea,select{font:inherit}
@@ -1069,7 +1098,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 
 <header>
  <div class="container nav">
-  <a class="brand" href="#home">
+  <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home">
    <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
    <div><div class="brand-name">Krishna Stone Craft</div><div class="brand-sub">The Art of Natural Stone</div></div>
   </a>
@@ -1080,6 +1109,43 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
  </div>
 </header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div class="mobile-drawer-header">
+    <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home">
+      <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo" style="width:42px;height:42px;">
+      <div>
+        <div class="brand-name" style="font-size:22px;">Krishna Stone Craft</div>
+        <div class="brand-sub" style="font-size:7px;">The Art of Natural Stone</div>
+      </div>
+    </a>
+    <button type="button" class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html#home">Home Page</a>
+    <a href="index.html#services">Our 10 Craft Divisions</a>
+    <a href="mandir.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 01. Stone Mandirs</a>
+    <a href="god-idols.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 02. God Idols &amp; Murtis</a>
+    <a href="double-height-wall.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 03. Double Height Walls</a>
+    <a href="landscape.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 04. Stone Landscape</a>
+    <a href="marble-inlay-work.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 05. Marble Inlay Work</a>
+    <a href="stone-cladding.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 06. Stone Cladding</a>
+    <a href="wall-mural.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 07. Stone Wall Murals</a>
+    <a href="stone-wall-design.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 08. Stone Wall Design</a>
+    <a href="stone-and-sculptures.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 09. Stone &amp; Sculptures</a>
+    <a href="artifacts.html" style="padding-left:26px;font-size:13px;color:var(--gold);">↳ 10. Stone Artifacts</a>
+    <a href="index.html#projects">Signature Projects</a>
+    <a href="index.html#about">About Krishna Stone Craft</a>
+    <a href="index.html#gallery">Craft Showcase Videos</a>
+    <a href="index.html#contact">Contact &amp; Custom Quote</a>
+  </div>
+  <div class="mobile-contact-group">
+    <a class="btn" style="width:100%;text-align:center;justify-content:center;" href="tel:+919672739036">☎ Call +91 96727 39036</a>
+    <a class="btn btn-outline" style="width:100%;text-align:center;justify-content:center;color:white;border-color:rgba(216,183,126,0.35);" href="mailto:krishnastonecraft@gmail.com">✉ krishnastonecraft@gmail.com</a>
+    <a class="btn" style="width:100%;text-align:center;justify-content:center;background:#25d366;color:#fff;border-color:#25d366;" href="https://wa.me/919672739036" target="_blank" rel="noopener">WhatsApp Inquiries ↗</a>
+  </div>
+</div>
 
 <main>
 <!-- Scroll-Driven 3D Hero Section -->
@@ -1861,7 +1927,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
    <div class="faq-item open"><button class="faq-q" aria-expanded="true">What stonework divisions does Krishna Stone Craft specialise in?<span>−</span></button><div class="faq-a">We specialise in 10 comprehensive stone crafts: Stone Mandirs, God Idols, Double Height Walls, Landscape Stonework, Marble Inlay Work, Stone Cladding, Stone Wall Murals, Stone Wall Designs, Stone & Sculptures, and Architectural Stone Artifacts.</div></div>
    <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you provide manufacturing and installation across India?<span>+</span></button><div class="faq-a">Yes. Krishna Stone Craft offers full PAN INDIA SERVICE. We manufacture each stone piece at our specialized facility and deploy trained installation teams to execute on-site assembly and finishing anywhere in India.</div></div>
    <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I order a custom-sized mandir, double height wall or mural?<span>+</span></button><div class="faq-a">Absolutely. All our work is bespoke. You can share your architect's drawings, elevations, reference photos and required dimensions to receive tailored 2D/3D proposals and stonework quotations.</div></div>
-   <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get a price quotation?<span>+</span></button><div class="faq-a">Call our workshop team directly at +91 96727 39036 or submit your project details via the WhatsApp enquiry form below with dimensions and preferred stone type.</div></div>
+   <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get a price quotation?<span>+</span></button><div class="faq-a">Call our workshop team directly at <a href="tel:+919672739036" style="color:var(--gold);text-decoration:underline;" aria-label="Call Krishna Stone Craft">+91 96727 39036</a> or submit your project details via the WhatsApp enquiry form below with dimensions and preferred stone type.</div></div>
    <div class="faq-item"><button class="faq-q" aria-expanded="false">Are the showcase videos authentic Krishna Stone Craft projects?<span>+</span></button><div class="faq-a">Yes. All videos in our visual inspiration section showcase genuine on-site stone cladding installations, workshop carving, and completed architectural stonework executed by Krishna Stone Craft.</div></div>
   </div>
  </div>
@@ -1873,16 +1939,19 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
    <div class="eyebrow">Let's create something remarkable</div>
    <h2>Tell Us About Your Project.</h2>
    <p>Have a mandir, double height wall, marble inlay, cladding or custom stone design requirement? Contact our team to begin.</p>
-   <div class="contact-row"><div class="contact-icon">☎</div><div><strong>Call Krishna Stone Craft</strong><a href="tel:+919672739036">+91 96727 39036</a></div></div>
-   <div class="contact-row"><div class="contact-icon">◎</div><div><strong>Instagram</strong><a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">@krishnastonecraft ↗</a></div></div>
+   <div class="contact-row"><div class="contact-icon">☎</div><div><strong>Call Krishna Stone Craft</strong><a href="tel:+919672739036" class="contact-link" aria-label="Call +91 96727 39036">+91 96727 39036</a></div></div>
+   <div class="contact-row"><div class="contact-icon">✉</div><div><strong>Official Email</strong><a href="mailto:krishnastonecraft@gmail.com" class="contact-link" aria-label="Email Krishna Stone Craft">krishnastonecraft@gmail.com</a></div></div>
+   <div class="contact-row"><div class="contact-icon">💬</div><div><strong>WhatsApp Direct</strong><a href="https://wa.me/919672739036" target="_blank" rel="noopener noreferrer" class="contact-link">+91 96727 39036 ↗</a></div></div>
+   <div class="contact-row"><div class="contact-icon">◎</div><div><strong>Instagram</strong><a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener" class="contact-link">@krishnastonecraft ↗</a></div></div>
    <div class="contact-row"><div class="contact-icon">⌂</div><div><strong>Service Coverage</strong><p>Pan India Manufacturing & On-Site Installation</p></div></div>
   </div>
 
-  <form class="contact-form" id="contactForm">
+  <form class="contact-form" id="contactForm" novalidate>
    <h3>Start an Enquiry</h3><p>Share your requirements and connect with our master stone consultants on WhatsApp.</p>
+   <div id="formFeedback" class="form-feedback" style="display:none;" role="alert"></div>
    <div class="form-grid">
-    <div class="field"><label for="name">Full Name *</label><input id="name" required placeholder="Your name"></div>
-    <div class="field"><label for="phone">Your Phone *</label><input id="phone" required type="tel" placeholder="Your contact number"></div>
+    <div class="field"><label for="name">Full Name *</label><input id="name" required placeholder="e.g. Rajesh Sharma"></div>
+    <div class="field"><label for="phone">Your Phone *</label><input id="phone" required type="tel" placeholder="e.g. +91 98765 43210"></div>
     <div class="field full"><label for="service">Craft Division Required *</label>
      <select id="service" required>
       <option value="">Choose a craft division</option>
@@ -1899,7 +1968,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
       <option value="Other Custom Stonework">Other Custom Stonework</option>
      </select>
     </div>
-    <div class="field full"><label for="location">Project City / State</label><input id="location" placeholder="Where is the project located?"></div>
+    <div class="field full"><label for="location">Project City / State</label><input id="location" placeholder="e.g. Jaipur, Rajasthan / Mumbai, Maharashtra"></div>
     <div class="field full"><label for="message">Project Details *</label><textarea id="message" required placeholder="Describe dimensions, stone type (sandstone, marble, granite) and installation requirements"></textarea></div>
    </div>
    <button class="btn" type="submit">Send Enquiry on WhatsApp ↗</button>
@@ -1912,13 +1981,36 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
  <div class="container">
   <div class="footer-grid">
    <div class="footer-brand">
-    <a class="brand" href="#home"><img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo"><div><div class="brand-name">Krishna Stone Craft</div><div class="brand-sub">The Art of Natural Stone</div></div></a>
+    <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home"><img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo"><div><div class="brand-name">Krishna Stone Craft</div><div class="brand-sub">The Art of Natural Stone</div></div></a>
     <p>Mandir, double height walls, landscape stone, marble inlay work, stone cladding, wall murals, sculptures and architectural stone craftsmanship. Manufacturing and turnkey installation across India.</p>
    </div>
-   <div class="footer-col"><h4>Craft Divisions</h4><a href="#services">Stone Mandir</a><a href="#services">Double Height Wall</a><a href="#services">Marble Inlay Work</a><a href="#services">Stone Cladding</a><a href="#services">Wall Murals</a></div>
-   <div class="footer-col"><h4>Contact</h4><a href="tel:+919672739036">+91 96727 39036</a><a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">Instagram ↗</a><a href="#contact">Project Enquiry</a></div>
+   <div class="footer-col">
+    <h4>Craft Divisions</h4>
+    <a href="mandir.html">Stone Mandir</a>
+    <a href="god-idols.html">God Idols</a>
+    <a href="double-height-wall.html">Double Height Wall</a>
+    <a href="marble-inlay-work.html">Marble Inlay Work</a>
+    <a href="stone-cladding.html">Stone Cladding</a>
+    <a href="wall-mural.html">Wall Murals</a>
+   </div>
+   <div class="footer-col">
+    <h4>Explore More</h4>
+    <a href="stone-wall-design.html">Stone Wall Design</a>
+    <a href="landscape.html">Stone Landscape</a>
+    <a href="stone-and-sculptures.html">Stone &amp; Sculptures</a>
+    <a href="artifacts.html">Stone Artifacts</a>
+    <a href="index.html#projects">Signature Projects</a>
+   </div>
+   <div class="footer-col">
+    <h4>Direct Contact</h4>
+    <a href="tel:+919672739036">☎ +91 96727 39036</a>
+    <a href="mailto:krishnastonecraft@gmail.com">✉ krishnastonecraft@gmail.com</a>
+    <a href="https://wa.me/919672739036" target="_blank" rel="noopener">WhatsApp Inquiries ↗</a>
+    <a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">Instagram @krishnastonecraft ↗</a>
+    <a href="index.html#contact">Discuss Your Project</a>
+   </div>
   </div>
-  <div class="footer-bottom"><span>© <span id="year"></span> Krishna Stone Craft. All rights reserved.</span><span>Architectural Stone Craftsmanship</span></div>
+  <div class="footer-bottom"><span>&copy; <span id="year">2026</span> Krishna Stone Craft. All rights reserved.</span><span>Architectural Stone Craftsmanship · Pan India Service</span></div>
  </div>
 </footer>
 
@@ -1968,7 +2060,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
           <p id="modalCategoryDesc">Hand-carved temple architecture, traditional shikharas, jharokhas and sacred stone shrines.</p>
         </div>
         <div class="slide-actions">
-          <a id="modalWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-inquire">
+          <a id="modalWhatsappBtn" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft" target="_blank" rel="noopener noreferrer" class="btn-modal-inquire">
             <span>Enquire On WhatsApp</span> ↗
           </a>
         </div>
@@ -1992,8 +2084,9 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 </div>
 
 <div class="floating">
- <a class="float-btn float-whatsapp" href="https://wa.me/919672739036" target="_blank" rel="noopener" aria-label="WhatsApp Krishna Stone Craft">✆</a>
- <button class="float-btn float-top" id="backTop" aria-label="Back to top">↑</button>
+ <a class="float-btn float-whatsapp" href="https://wa.me/919672739036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Krishna Stone Craft">✆</a>
+ <a class="float-btn float-call" href="tel:+919672739036" aria-label="Call Krishna Stone Craft">☎</a>
+ <button type="button" class="float-btn float-top" id="backTop" aria-label="Back to top">↑</button>
 </div>
 
 <script>

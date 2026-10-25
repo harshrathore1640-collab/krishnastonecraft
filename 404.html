@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#17110d">
+<meta name="description" content="Architectural Space Not Found. Explore authentic hand-carved stone mandirs, double height walls, marble inlay, cladding and stone murals by Krishna Stone Craft.">
+<title>404 — Architectural Space Not Found | Krishna Stone Craft</title>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark: #140e0a;
+  --dark2: #1e1611;
+  --card: #231913;
+  --gold: #d8b77e;
+  --gold-light: #f3dfba;
+  --brown: #76533b;
+  --text: #f7f1e8;
+  --muted: #a89888;
+  --line: rgba(216, 183, 126, 0.2);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.65;
+}
+a { text-decoration: none; color: inherit; transition: color 0.25s, opacity 0.25s; }
+button { font: inherit; cursor: pointer; }
+.container { width: min(1200px, 92%); margin: auto; }
+
+/* Announcement Bar */
+.announcement {
+  background: #0a0604;
+  color: var(--gold);
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(14, 9, 6, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.brand-logo {
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.brand-sub {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #e5d8cb;
+}
+.nav-links a:hover { color: var(--gold); }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  background: var(--gold);
+  color: #17110d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  border: 1px solid var(--gold);
+  transition: all 0.25s ease;
+}
+.btn-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(216, 183, 126, 0.3);
+}
+.menu-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Nav Drawer */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 9, 6, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+.mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-close-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 22px;
+}
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 24px;
+}
+.mobile-links a {
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #f7f1e8;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.mobile-links a:hover {
+  background: rgba(216, 183, 126, 0.08);
+  color: var(--gold);
+}
+.mobile-contact-group {
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 404 Hero Section */
+.not-found-section {
+  position: relative;
+  padding: 90px 0 100px;
+  text-align: center;
+  overflow: hidden;
+}
+.not-found-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(216, 183, 126, 0.09) 0%, rgba(20, 14, 10, 0) 70%);
+  pointer-events: none;
+}
+.error-code {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(80px, 14vw, 150px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 4px;
+  background: linear-gradient(180deg, #ffffff 20%, var(--gold) 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 12px;
+}
+.error-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  background: rgba(216, 183, 126, 0.08);
+}
+.not-found-section h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  color: #fff;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.not-found-section p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.8;
+}
+.actions-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.btn-primary {
+  padding: 14px 28px;
+  background: var(--gold);
+  color: #17110d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(216, 183, 126, 0.25);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  border-radius: 6px;
+}
+.btn-secondary:hover {
+  background: rgba(216, 183, 126, 0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Quick Categories Grid */
+.quick-divisions {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  background: var(--dark2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+.quick-divisions-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.division-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #f7f1e8;
+  transition: all 0.25s ease;
+}
+.division-card-link:hover {
+  border-color: var(--gold);
+  background: rgba(216, 183, 126, 0.08);
+  color: var(--gold);
+  transform: translateX(3px);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  background: #0d0805;
+  padding: 60px 0 30px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 360px;
+  margin-top: 14px;
+}
+.footer-col h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #b5a494;
+  margin-bottom: 10px;
+}
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .nav-links, .header-actions .btn-cta { display: none; }
+  .menu-toggle { display: inline-flex; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .not-found-section { padding: 60px 0 80px; }
+  .quick-divisions { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">
+  Handcrafted Stone Art &nbsp; · &nbsp; Manufacturing + Installation &nbsp; · &nbsp; Pan India Service
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home">
+      <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
+      <div>
+        <div class="brand-name">Krishna Stone Craft</div>
+        <div class="brand-sub">The Art of Natural Stone</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#services">Our Craft</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#gallery">Videos</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn-cta" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft" target="_blank" rel="noopener noreferrer">
+        Discuss Project ↗
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div class="mobile-drawer-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo" style="width:40px;height:40px;">
+      <div class="brand-name" style="font-size:20px;">Krishna Stone Craft</div>
+    </a>
+    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html#home">Home Page</a>
+    <a href="index.html#services">All 10 Craft Divisions</a>
+    <a href="mandir.html">Stone Mandirs</a>
+    <a href="god-idols.html">God Idols & Murtis</a>
+    <a href="double-height-wall.html">Double Height Walls</a>
+    <a href="marble-inlay-work.html">Marble Inlay Work</a>
+    <a href="stone-cladding.html">Stone Cladding</a>
+    <a href="wall-mural.html">Stone Wall Murals</a>
+    <a href="index.html#projects">Signature Projects</a>
+    <a href="index.html#gallery">Craft Videos</a>
+    <a href="index.html#contact">Contact Us</a>
+  </div>
+  <div class="mobile-contact-group">
+    <a class="btn-primary" style="text-align:center;" href="tel:+919672739036">☎ Call +91 96727 39036</a>
+    <a class="btn-secondary" style="text-align:center;" href="mailto:krishnastonecraft@gmail.com">✉ krishnastonecraft@gmail.com</a>
+    <a class="btn-primary" style="text-align:center; background:#25d366; color:#fff;" href="https://wa.me/919672739036" target="_blank" rel="noopener">WhatsApp Inquiries ↗</a>
+  </div>
+</div>
+
+<main>
+  <section class="not-found-section">
+    <div class="container">
+      <div class="error-code">404</div>
+      <div class="error-tag">Architectural Space Not Found</div>
+      <h1>Every Masterpiece Has A Destination</h1>
+      <p>The stonework gallery, design piece, or page you were looking for is not at this address. It may have been relocated, updated, or is undergoing custom sculpting by our master artisans.</p>
+      
+      <div class="actions-row">
+        <a class="btn-primary" href="index.html">Return to Home Page ↗</a>
+        <a class="btn-secondary" href="index.html#services">Explore All 10 Divisions ↗</a>
+        <a class="btn-secondary" href="index.html#contact">Contact Workshop ↗</a>
+      </div>
+
+      <div class="quick-divisions">
+        <h3 class="quick-divisions-title">Featured Craft Divisions</h3>
+        <div class="divisions-grid">
+          <a class="division-card-link" href="mandir.html"><span>01 / Stone Mandir</span><span>↗</span></a>
+          <a class="division-card-link" href="god-idols.html"><span>02 / God Idols &amp; Murtis</span><span>↗</span></a>
+          <a class="division-card-link" href="double-height-wall.html"><span>03 / Double Height Wall</span><span>↗</span></a>
+          <a class="division-card-link" href="landscape.html"><span>04 / Stone Landscape</span><span>↗</span></a>
+          <a class="division-card-link" href="marble-inlay-work.html"><span>05 / Marble Inlay Work</span><span>↗</span></a>
+          <a class="division-card-link" href="stone-cladding.html"><span>06 / Stone Cladding</span><span>↗</span></a>
+          <a class="division-card-link" href="wall-mural.html"><span>07 / Stone Wall Murals</span><span>↗</span></a>
+          <a class="division-card-link" href="stone-wall-design.html"><span>08 / Stone Wall Design</span><span>↗</span></a>
+          <a class="division-card-link" href="stone-and-sculptures.html"><span>09 / Stone &amp; Sculptures</span><span>↗</span></a>
+          <a class="division-card-link" href="artifacts.html"><span>10 / Stone Artifacts</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Krishna Stone Craft Home">
+          <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
+          <div>
+            <div class="brand-name">Krishna Stone Craft</div>
+            <div class="brand-sub">The Art of Natural Stone</div>
+          </div>
+        </a>
+        <p>Direct manufacturers and turnkey installers of authentic hand-carved stone mandirs, god idols, double-height walls, marble inlays, cladding, murals and sculptures across India.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Craft Divisions</h4>
+        <a href="mandir.html">Stone Mandir</a>
+        <a href="god-idols.html">God Idols</a>
+        <a href="double-height-wall.html">Double Height Wall</a>
+        <a href="marble-inlay-work.html">Marble Inlay Work</a>
+        <a href="stone-cladding.html">Stone Cladding</a>
+        <a href="wall-mural.html">Wall Murals</a>
+      </div>
+      <div class="footer-col">
+        <h4>Direct Contact</h4>
+        <a href="tel:+919672739036">☎ +91 96727 39036</a>
+        <a href="mailto:krishnastonecraft@gmail.com">✉ krishnastonecraft@gmail.com</a>
+        <a href="https://wa.me/919672739036" target="_blank" rel="noopener">WhatsApp Inquiries ↗</a>
+        <a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">Instagram @krishnastonecraft ↗</a>
+        <a href="index.html#contact">Discuss Your Project</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year">2026</span> Krishna Stone Craft. All rights reserved.</div>
+      <div>Architectural Stone Craftsmanship · Pan India Service</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+  function openMenu() {
+    mobileDrawer.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    mobileDrawer.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (menuToggle) menuToggle.addEventListener('click', openMenu);
+  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMenu);
+  document.querySelectorAll('.mobile-links a').forEach(a => a.addEventListener('click', closeMenu));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
