@@ -35,18 +35,25 @@
   --line: rgba(216, 183, 126, 0.22);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: 'DM Sans', sans-serif;
   color: var(--text);
   background: var(--dark);
   line-height: 1.65;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
-img { width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-button { font: inherit; cursor: pointer; }
-.container { width: min(1260px, 92%); margin: auto; }
+img, video, iframe, svg, canvas { max-width: 100%; height: auto; }
+h1, h2, h3, h4, h5, h6, p, a, span, button, strong { overflow-wrap: break-word; word-wrap: break-word; }
+.container { width: min(1260px, 92%); margin: auto; max-width: 100%; }
 
 /* Announcement */
 .announcement {
@@ -658,21 +665,7 @@ footer {
   font-size: 10px;
 }
 
-@media (max-width: 850px) {
-  .nav-links { display: none; }
-  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-  .category-hero { padding: 40px 0; }
-  .category-hero h1 { font-size: 34px; }
-  .photo-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
-}
-
 /* Mobile Navigation & Responsive Overflow Controls */
-html, body {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
-  position: relative;
-}
 .menu-toggle {
   display: none;
   background: rgba(255, 255, 255, 0.05);
@@ -778,8 +771,53 @@ html, body {
   .menu-toggle { display: inline-flex; }
   .floating { right: 12px; bottom: 12px; }
   .float-btn { width: 42px; height: 42px; font-size: 16px; }
+  .category-hero { padding: 36px 0 32px; }
+  .category-hero h1 { font-size: clamp(26px, 6vw, 42px); }
+  .category-hero-sub { font-size: 18px; margin-bottom: 12px; }
+  .category-hero-desc { font-size: 12px; line-height: 1.7; margin-bottom: 20px; }
+  .hero-highlights { gap: 8px; margin-bottom: 24px; }
+  .hero-highlight-pill { font-size: 10px; padding: 5px 12px; max-width: 100%; }
+  .photo-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .other-divisions-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 
+@media (max-width: 600px) {
+  .container { width: 92%; }
+  .nav { height: 68px; }
+  .brand-logo { width: 40px; height: 40px; }
+  .brand-name { font-size: 18px; }
+  .brand-sub { font-size: 7px; letter-spacing: 1.8px; }
+  .breadcrumb { font-size: 10px; flex-wrap: wrap; gap: 6px; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; text-align: center; padding: 12px 18px; }
+  .photo-grid { grid-template-columns: 1fr; gap: 16px; }
+  .gallery-card-footer { padding: 14px 16px; }
+  .gallery-card-title { font-size: 15px; }
+  .gallery-zoom-btn { opacity: 1; transform: translateY(0); font-size: 9px; padding: 5px 10px; }
+  .other-divisions-section { padding: 44px 0 60px; }
+  .other-divisions-heading { margin-bottom: 28px; }
+  .other-divisions-heading h3 { font-size: 24px; }
+  .other-divisions-grid { grid-template-columns: 1fr; gap: 10px; }
+  .other-division-card { padding: 14px 16px; }
+  .other-div-num { width: 34px; height: 34px; font-size: 17px; }
+  .gallery-header { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
+  .gallery-header h2 { font-size: 24px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  
+  /* Lightbox Mobile Adjustments */
+  .lightbox { padding: 8px; }
+  .lightbox-window { max-height: 96vh; }
+  .lightbox-header { padding: 12px 14px; }
+  .lightbox-header h4 { font-size: 15px; }
+  .lightbox-body { min-height: 200px; padding: 10px; }
+  .lightbox-img { max-height: 52vh; }
+  .lightbox-arrow { width: 36px; height: 36px; font-size: 18px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-footer { padding: 10px 14px; flex-wrap: wrap; gap: 10px; }
+  .lightbox-inquire-btn { width: 100%; justify-content: center; text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -915,7 +953,7 @@ html, body {
           <h2>Double Height Wall Portfolio</h2>
           <p>Browse authentic photographs of our handcrafted installations and manufactured designs.</p>
         </div>
-        <div class="gallery-count-badge">SHOWING 5 DESIGNS</div>
+        <div class="gallery-count-badge">SHOWING 3 DESIGNS</div>
       </div>
 
       <div class="photo-grid">
@@ -964,9 +1002,9 @@ html, body {
 
       <article class="gallery-card" data-index="2">
         <div class="gallery-card-image-wrap">
-          <img src="assets/double-height-wall/double-height-wall-03.jpeg" alt="Double Height Wall Design #03" loading="lazy" class="gallery-card-img">
+          <img src="assets/double-height-wall/double-height-wall-03.jpeg" alt="Double Height Living Room Wall in Natural Sandstone with Floral Arabesque Carvings and Ambient LED Lighting" loading="lazy" class="gallery-card-img">
           <div class="gallery-card-badge">#03</div>
-          <button type="button" class="gallery-zoom-btn" data-full="assets/double-height-wall/double-height-wall-03.jpeg" data-caption="Double Height Wall — Design #03" aria-label="Explore High-Resolution Design">
+          <button type="button" class="gallery-zoom-btn" data-full="assets/double-height-wall/double-height-wall-03.jpeg" data-caption="Double Height Wall #03 — Sandstone Feature Wall with Floral Relief Panels &amp; Warm Vertical Illumination" aria-label="Explore High-Resolution Design">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
             <span>Zoom</span>
           </button>
@@ -977,48 +1015,6 @@ html, body {
             <h3 class="gallery-card-title">Double Height Wall #03</h3>
           </div>
           <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Double%20Height%20Wall%20Design%20%2303%20(assets%2Fdouble-height-wall%2Fdouble-height-wall-03.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
-            <span>Enquire</span> ↗
-          </a>
-        </div>
-      </article>
-    
-
-      <article class="gallery-card" data-index="3">
-        <div class="gallery-card-image-wrap">
-          <img src="assets/double-height-wall/double-height-wall-04.jpeg" alt="Double Height Wall Design #04" loading="lazy" class="gallery-card-img">
-          <div class="gallery-card-badge">#04</div>
-          <button type="button" class="gallery-zoom-btn" data-full="assets/double-height-wall/double-height-wall-04.jpeg" data-caption="Double Height Wall — Design #04" aria-label="Explore High-Resolution Design">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            <span>Zoom</span>
-          </button>
-        </div>
-        <div class="gallery-card-footer">
-          <div class="gallery-card-meta">
-            <span class="gallery-card-category">03 / GRAND INTERIORS</span>
-            <h3 class="gallery-card-title">Double Height Wall #04</h3>
-          </div>
-          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Double%20Height%20Wall%20Design%20%2304%20(assets%2Fdouble-height-wall%2Fdouble-height-wall-04.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
-            <span>Enquire</span> ↗
-          </a>
-        </div>
-      </article>
-    
-
-      <article class="gallery-card" data-index="4">
-        <div class="gallery-card-image-wrap">
-          <img src="assets/double-height-wall/double-height-wall-05.jpeg" alt="Double Height Wall Design #05" loading="lazy" class="gallery-card-img">
-          <div class="gallery-card-badge">#05</div>
-          <button type="button" class="gallery-zoom-btn" data-full="assets/double-height-wall/double-height-wall-05.jpeg" data-caption="Double Height Wall — Design #05" aria-label="Explore High-Resolution Design">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            <span>Zoom</span>
-          </button>
-        </div>
-        <div class="gallery-card-footer">
-          <div class="gallery-card-meta">
-            <span class="gallery-card-category">03 / GRAND INTERIORS</span>
-            <h3 class="gallery-card-title">Double Height Wall #05</h3>
-          </div>
-          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Double%20Height%20Wall%20Design%20%2305%20(assets%2Fdouble-height-wall%2Fdouble-height-wall-05.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
             <span>Enquire</span> ↗
           </a>
         </div>
@@ -1187,7 +1183,7 @@ html, body {
 
 <script>
 (() => {
-  const imageList = ["assets/double-height-wall/double-height-wall-01.jpeg","assets/double-height-wall/double-height-wall-02.jpeg","assets/double-height-wall/double-height-wall-03.jpeg","assets/double-height-wall/double-height-wall-04.jpeg","assets/double-height-wall/double-height-wall-05.jpeg"];
+  const imageList = ["assets/double-height-wall/double-height-wall-01.jpeg","assets/double-height-wall/double-height-wall-02.jpeg","assets/double-height-wall/double-height-wall-03.jpeg"];
   const catTitle = "Double Height Wall";
   const phoneNumber = "919672739036";
 

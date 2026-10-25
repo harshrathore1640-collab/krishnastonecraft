@@ -36,8 +36,10 @@
   --line:#e6d8c7;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px;width:100%;max-width:100vw;overflow-x:hidden}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.65;width:100%;max-width:100vw;overflow-x:hidden;position:relative}
+html{scroll-behavior:smooth;scroll-padding-top:85px;width:100%;max-width:100%;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.65;width:100%;max-width:100%;overflow-x:hidden;position:relative}
+img,video,iframe,canvas,svg{max-width:100%;height:auto}
+h1,h2,h3,h4,h5,h6,p,a,span,button,strong,em{overflow-wrap:break-word;word-wrap:break-word}
 
 /* Mobile Nav Drawer */
 .mobile-drawer{position:fixed;inset:0;background:rgba(14,9,6,.98);backdrop-filter:blur(20px);z-index:999;display:flex;flex-direction:column;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s ease;overflow-y:auto}
@@ -170,13 +172,24 @@ header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.88);border-bo
     -webkit-text-fill-color: transparent;
 }
 
-/* Trust */
-.trust{background:var(--ivory);border-bottom:1px solid var(--line);padding:22px 0}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.trust-item{display:flex;align-items:center;justify-content:center;gap:12px}
-.trust-icon{height:39px;width:39px;border:1px solid #d6bea0;color:var(--brown);display:grid;place-items:center;font-size:18px;flex-shrink:0}
-.trust-item strong{display:block;font-size:11px}
-.trust-item small{display:block;color:var(--muted);font-size:9px}
+/* Hero Statement Strip */
+.hero-statement-strip {
+  background: #17110d;
+  border-top: 1px solid rgba(216, 183, 126, 0.22);
+  border-bottom: 1px solid rgba(216, 183, 126, 0.22);
+  padding: 24px 0;
+  text-align: center;
+}
+.hero-statement-text {
+  font-family: 'DM Sans', sans-serif;
+  color: #f7f1e8;
+  font-size: 13.5px;
+  line-height: 1.85;
+  max-width: 900px;
+  margin: 0 auto;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
 
 /* General sections */
 .section{padding:88px 0}
@@ -453,82 +466,101 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 .float-whatsapp{background:#218c50}
 .float-top{background:var(--dark)}
 
-@media(max-width:950px){
- .nav-links{gap:13px;font-size:11px}
- .hero-full-content{grid-template-columns:1fr;min-height:auto;padding-top:45px;padding-bottom:50px}
- .hero-floating-exhibition{height:340px;margin-top:20px}
- .exhibit-card{width:200px}
- .exhibit-card img{height:120px}
- .exhibit-card-1{right:10px;top:10px}
- .exhibit-card-2{right:30px;bottom:20px}
- .exhibit-card-3{left:10px;top:90px}
- .hero-spline-gradient{background:linear-gradient(180deg,rgba(20,14,10,.94) 0%,rgba(20,14,10,.82) 50%,rgba(20,14,10,.45) 100%)}
- .service-grid{grid-template-columns:1fr 1fr;gap:15px}
- .service-image{height:220px}
- .work-large{height:470px}
- .work-tile{min-height:225px}
- .about-grid{gap:35px}
- .video-card{flex:0 0 calc((100% - 18px) / 2)}
- .video-player-container{height:220px}
- .video-header-bar{flex-direction:column;align-items:flex-start;gap:16px}
+@media(max-width:850px){
+ .nav-links, .nav > .btn { display: none; }
+ .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+ .hero-full-content { grid-template-columns: 1fr; min-height: auto; padding-top: 40px; padding-bottom: 40px; }
+ .service-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+ .service-image { height: 220px; }
+ .work-grid { grid-template-columns: 1fr; gap: 16px; }
+ .work-large { height: 420px; }
+ .work-side { grid-template-columns: 1fr 1fr; gap: 12px; }
+ .about-grid { grid-template-columns: 1fr; gap: 32px; }
+ .video-card { flex: 0 0 calc((100% - 18px) / 2); }
+ .video-player-container { height: 220px; }
+ .video-header-bar { flex-direction: column; align-items: flex-start; gap: 16px; }
+ .craft-spaces-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+ .craft-pills-bar {
+   justify-content: flex-start;
+   overflow-x: auto;
+   flex-wrap: nowrap;
+   padding: 6px 4px 14px;
+   margin: 18px 0 24px;
+   -webkit-overflow-scrolling: touch;
+   scrollbar-width: none;
+   max-width: 100%;
+   width: 100%;
+ }
+ .craft-pills-bar::-webkit-scrollbar { display: none; }
+ .craft-pill-btn { flex-shrink: 0; padding: 8px 18px; font-size: 12px; }
 }
-@media(max-width:680px){
- .container{width:92%}
- .announcement{font-size:8px;letter-spacing:1.2px}
- .nav{height:69px}
- .brand-logo{width:42px;height:42px}
- .brand-name{font-size:23px}
- .brand-sub{font-size:7px}
- .menu-toggle{display:block}
- .nav-links{display:none;position:absolute;left:0;right:0;top:69px;background:var(--dark);padding:14px 5%;border-bottom:1px solid #514034;flex-direction:column;align-items:stretch;gap:0}
- .nav-links.open{display:flex}
- .nav-links a{padding:12px 0;border-bottom:1px solid #403126}
- .nav>.btn{display:none}
- .hero-full-content{padding-top:35px;padding-bottom:35px}
- .hero h1{font-size:46px;margin:18px 0}
- .hero-copy{font-size:12px}
- .hero-floating-exhibition{height:260px}
- .exhibit-card{width:155px}
- .exhibit-card img{height:95px}
- .exhibit-card-body h4{font-size:14px}
- .ticker-title{display:none}
- .hero-stats{gap:16px}
- .trust-grid{grid-template-columns:1fr 1fr;gap:20px 10px}
- .trust-item{justify-content:flex-start;gap:8px}
- .trust-icon{width:33px;height:33px}
- .trust-item strong{font-size:10px}
- .trust-item small{font-size:8px}
- .section{padding:60px 0}
- .heading{margin-bottom:28px}
- .heading h2{font-size:42px}
- .service-grid{grid-template-columns:1fr}
- .service-image{height:220px}
- .work-grid{grid-template-columns:1fr}
- .work-large{height:390px}
- .work-side{grid-template-rows:auto;grid-template-columns:1fr 1fr;gap:10px}
- .work-tile{height:220px;min-height:0}
- .work-overlay{padding:13px}
- .about-grid{grid-template-columns:1fr;gap:35px}
- .about-visual{height:360px;margin-right:8px}
- .about-copy h2{font-size:45px}
- .about-points{gap:14px}
- .process-grid{grid-template-columns:1fr;gap:12px}
- .process-card{padding:22px}
- .video-card{flex:0 0 100%}
- .video-player-container{height:210px}
- .video-slider-controls{align-self:flex-end}
- .cta-inner{align-items:flex-start;flex-direction:column}
- .cta h2{font-size:43px}
- .contact-grid{grid-template-columns:1fr;gap:28px}
- .contact-copy h2{font-size:44px}
- .contact-form{padding:23px 17px}
- .form-grid{grid-template-columns:1fr;gap:0}
- .field.full{grid-column:auto}
- .footer-grid{grid-template-columns:1fr 1fr;gap:25px 16px}
- .footer-brand{grid-column:1/-1}
- .footer-bottom{flex-direction:column}
- .floating{right:11px;bottom:11px}
- .float-btn{width:43px;height:43px}
+
+@media(max-width:600px){
+ .container { width: 92%; max-width: 100%; }
+ .announcement { font-size: 8px; letter-spacing: 1.2px; padding: 7px 10px; }
+ .nav { height: 68px; }
+ .brand-logo { width: 40px; height: 40px; }
+ .brand-name { font-size: 20px; }
+ .brand-sub { font-size: 7px; letter-spacing: 1.8px; }
+ .section { padding: 50px 0; }
+ .heading { margin-bottom: 24px; }
+ .heading h2 { font-size: clamp(28px, 6.5vw, 40px); }
+ .heading p { font-size: 11px; line-height: 1.8; }
+ .hero-statement-strip { padding: 18px 0; }
+ .hero-statement-text { font-size: 12px; line-height: 1.7; }
+ .service-grid { grid-template-columns: 1fr; gap: 16px; }
+ .service-content { padding: 18px 18px 20px; }
+ .service-content h3 { font-size: 24px; }
+ .service-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+ .btn-open-gallery, .service-link { width: 100%; justify-content: center; text-align: center; }
+ .craft-spaces-grid { grid-template-columns: 1fr; gap: 16px; }
+ .craft-space-card { border-radius: 16px; aspect-ratio: 4 / 3; }
+ .craft-space-overlay { padding: 16px 18px; }
+ .craft-space-title { font-size: 18px; }
+ .work-large { height: 290px; }
+ .work-side { grid-template-columns: 1fr; gap: 12px; }
+ .work-tile { min-height: 220px; height: auto; }
+ .work-overlay { padding: 16px; }
+ .work-overlay h3 { font-size: 22px; }
+ .about { overflow: hidden; }
+ .about-visual { height: 280px; margin-right: 0; }
+ .about-visual:after { inset: 8px 0 -8px 8px; border-color: rgba(216, 183, 126, 0.4); }
+ .about-copy h2 { font-size: clamp(28px, 6.5vw, 40px); margin: 14px 0; }
+ .about-points { grid-template-columns: 1fr; gap: 12px; }
+ .process-grid { grid-template-columns: 1fr; gap: 12px; }
+ .process-card { padding: 20px; }
+ .process-no { font-size: 34px; }
+ .process-card h3 { font-size: 22px; }
+ .video-slider-wrapper { margin: 0; padding: 6px 0 14px; }
+ .video-card { flex: 0 0 100%; max-width: 100%; }
+ .video-player-container { height: auto; aspect-ratio: 16 / 9; }
+ .video-info { padding: 16px; }
+ .video-info h3 { font-size: 18px; min-height: auto; }
+ .video-info p { min-height: auto; font-size: 11px; }
+ .video-header-bar { flex-direction: column; align-items: stretch; gap: 14px; }
+ .video-slider-controls { justify-content: space-between; width: 100%; }
+ .cta { padding: 44px 0; }
+ .cta-inner { flex-direction: column; align-items: stretch; gap: 18px; text-align: center; }
+ .cta h2 { font-size: clamp(26px, 6.5vw, 36px); }
+ .cta .btn { width: 100%; justify-content: center; text-align: center; }
+ .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+ .contact-copy h2 { font-size: clamp(28px, 6.5vw, 38px); }
+ .contact-row { gap: 10px; padding: 14px 0; }
+ .contact-row a { word-break: break-all; }
+ .contact-form { padding: 20px 16px; }
+ .contact-form h3 { font-size: 26px; }
+ .form-grid { grid-template-columns: 1fr; gap: 0; }
+ .field.full { grid-column: auto; }
+ .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+ .footer-brand { grid-column: auto; }
+ .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+ .floating { right: 12px; bottom: 12px; }
+ .float-btn { width: 42px; height: 42px; font-size: 16px; }
+}
+
+@media(max-width:380px){
+ .brand-name { font-size: 18px; }
+ .brand-logo { width: 36px; height: 36px; }
 }
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
@@ -906,12 +938,16 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 }
 @media (max-width: 650px) {
   .photo-modal { padding: 8px; }
-  .slide-stage { padding: 10px 36px; min-height: 240px; }
-  .slide-main-image { max-height: 40vh; }
+  .photo-modal-window { max-height: 96vh; }
+  .slide-stage { padding: 10px 32px; min-height: 200px; }
+  .slide-main-image { max-height: 38vh; }
+  .nav-arrow { width: 34px; height: 34px; font-size: 20px; }
+  .nav-prev { left: 6px; }
+  .nav-next { right: 6px; }
   .gallery-photo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .modal-header-actions { width: 100%; justify-content: space-between; }
-  .modal-thumb { width: 56px; height: 42px; }
-  .slide-meta-bar { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .modal-thumb { width: 52px; height: 38px; }
+  .slide-meta-bar { flex-direction: column; align-items: flex-start; gap: 12px; padding: 12px 16px; }
   .btn-modal-inquire { width: 100%; justify-content: center; }
 }
 
@@ -1163,42 +1199,23 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </div>
 
     <!-- Overlay Hero Content -->
-    <div class="relative z-20 pointer-events-none flex flex-col justify-between p-6 sm:p-10 md:p-16 max-w-7xl mx-auto w-full min-h-[85vh] sm:min-h-[90vh]">
+    <div class="relative z-20 pointer-events-none flex flex-col justify-center p-4 sm:p-8 md:p-14 max-w-7xl mx-auto w-full min-h-[85vh] sm:min-h-[90vh]">
         
         <!-- Top / Left Hero Heading & CTAs -->
-        <div class="pt-16 sm:pt-20 max-w-2xl opacity-0 transform -translate-y-4" id="hero-title-group">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-white/20 text-[#f5e6cc] font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase mb-4 shadow-lg backdrop-blur-md">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#d8b77e] animate-pulse"></span>
-                <span>ARCHITECTURAL STONE CRAFTSMANSHIP</span>
-            </div>
-            <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
+        <div class="pt-8 sm:pt-12 max-w-2xl opacity-0 transform -translate-y-4" id="hero-title-group">
+            <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] break-words">
                 Timeless Stone Artistry in <span class="text-gradient">Motion</span>
             </h1>
-            <p class="text-xs sm:text-sm text-gray-100 mt-4 max-w-xl leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal">
-                From hand-carved stone mandirs to grand double height walls, marble inlay work, architectural cladding and stone murals, we manufacture and install bespoke stone creations across India.
-            </p>
-            <div class="flex items-center gap-4 mt-8 pointer-events-auto flex-wrap">
-                <a href="#services" class="px-7 py-3.5 rounded-full bg-[#d8b77e] hover:bg-white text-black font-semibold text-xs tracking-widest transition-all shadow-2xl hover:scale-105">EXPLORE CRAFT ↗</a>
-                <a href="#gallery" class="px-7 py-3.5 rounded-full bg-black/50 border border-white/30 text-white font-semibold text-xs tracking-widest hover:bg-white hover:text-black transition-all backdrop-blur-md shadow-2xl">WATCH VIDEOS ↗</a>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-8 pointer-events-auto">
+                <a href="#services" class="w-full sm:w-auto text-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#d8b77e] hover:bg-white text-black font-semibold text-xs tracking-widest transition-all shadow-2xl hover:scale-105">EXPLORE CRAFT ↗</a>
             </div>
-        </div>
-
-        <!-- Bottom Status Indicator -->
-        <div class="flex items-center pt-10 pb-4 pointer-events-auto">
-            <span id="hero-stage-badge" class="px-4 py-2 rounded-full bg-black/50 border border-white/20 text-[#f5e6cc] font-mono text-[11px] sm:text-xs tracking-widest uppercase shadow-xl flex items-center gap-2 backdrop-blur-md">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>CINEMATIC SHOWCASE · CRAFT IN MOTION</span>
-            </span>
         </div>
     </div>
 </section>
 
-<section class="trust">
- <div class="container trust-grid">
-  <div class="trust-item"><div class="trust-icon">✧</div><div><strong>Intricate Stone Work</strong><small>Details that stand out</small></div></div>
-  <div class="trust-item"><div class="trust-icon">⌂</div><div><strong>10 Dedicated Divisions</strong><small>Mandirs, murals & cladding</small></div></div>
-  <div class="trust-item"><div class="trust-icon">◇</div><div><strong>Direct Manufacturing</strong><small>Factory direct craft</small></div></div>
-  <div class="trust-item"><div class="trust-icon">↗</div><div><strong>Pan India Installation</strong><small>Turnkey site execution</small></div></div>
+<section class="hero-statement-strip">
+ <div class="container">
+  <p class="hero-statement-text">From hand-carved stone mandirs to grand double height walls, marble inlay work, architectural cladding and stone murals, we manufacture and install bespoke stone creations across India.</p>
  </div>
 </section>
 
@@ -2092,23 +2109,52 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 
  const phoneNumber = "919672739036";
 
- // Responsive mobile menu
+ // Responsive mobile menu & drawer
  const menu = document.getElementById("menuToggle");
- const nav = document.getElementById("navLinks");
+ const mobileDrawer = document.getElementById("mobileDrawer");
+ const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 
- menu.addEventListener("click", () => {
-   const open = nav.classList.toggle("open");
-   menu.setAttribute("aria-expanded", String(open));
-   menu.textContent = open ? "×" : "☰";
- });
+ function openMobileNav() {
+   if (mobileDrawer) {
+     mobileDrawer.classList.add("open");
+     document.body.style.overflow = "hidden";
+     if (menu) {
+       menu.setAttribute("aria-expanded", "true");
+       menu.textContent = "✕";
+     }
+   }
+ }
 
- nav.querySelectorAll("a").forEach(link => {
-   link.addEventListener("click", () => {
-     nav.classList.remove("open");
-     menu.setAttribute("aria-expanded", "false");
-     menu.textContent = "☰";
+ function closeMobileNav() {
+   if (mobileDrawer) {
+     mobileDrawer.classList.remove("open");
+     document.body.style.overflow = "";
+     if (menu) {
+       menu.setAttribute("aria-expanded", "false");
+       menu.textContent = "☰";
+     }
+   }
+ }
+
+ if (menu) {
+   menu.addEventListener("click", () => {
+     if (mobileDrawer && mobileDrawer.classList.contains("open")) {
+       closeMobileNav();
+     } else {
+       openMobileNav();
+     }
    });
- });
+ }
+
+ if (mobileCloseBtn) {
+   mobileCloseBtn.addEventListener("click", closeMobileNav);
+ }
+
+ if (mobileDrawer) {
+   mobileDrawer.querySelectorAll("a").forEach(link => {
+     link.addEventListener("click", closeMobileNav);
+   });
+ }
 
  // Video Slider Track & Controls
  const videoTrack = document.getElementById("videoTrack");
@@ -2326,7 +2372,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
       tag: "02 / SACRED SCULPTURE",
       title: "God Idols",
       desc: "Hand-carved divine stone idols, sacred temple murtis, and spiritual deity sculptures sculpted from pure Makrana marble and Rajasthan sandstone.",
-      images: Array.from({ length: 10 }, (_, i) => "assets/god-idols/god-idols-" + String(i + 1).padStart(2, "0") + ".jpeg")
+      images: Array.from({ length: 8 }, (_, i) => "assets/god-idols/god-idols-" + String(i + 1).padStart(2, "0") + ".jpeg")
     },
     "double-height-wall": {
       tag: "02 / GRAND INTERIORS",
@@ -2335,9 +2381,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
       images: [
         "assets/double-height-wall/double-height-wall-01.jpeg",
         "assets/double-height-wall/double-height-wall-02.jpeg",
-        "assets/double-height-wall/double-height-wall-03.jpeg",
-        "assets/double-height-wall/double-height-wall-04.jpeg",
-        "assets/double-height-wall/double-height-wall-05.jpeg"
+        "assets/double-height-wall/double-height-wall-03.jpeg"
       ]
     },
     "landscape": {
