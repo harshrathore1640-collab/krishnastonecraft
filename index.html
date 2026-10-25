@@ -35,8 +35,8 @@ button,input,textarea,select{font:inherit}
 button{cursor:pointer}
 .container{width:min(1200px,91%);margin:auto}
 .gold{color:var(--gold)}
-.announcement{background:#17110d;color:#dfc69f;text-align:center;padding:9px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase}
-header{position:sticky;top:0;z-index:100;background:rgba(33,25,20,.97);border-bottom:1px solid #47362a;backdrop-filter:blur(12px)}
+.announcement{background:#000000;color:#e8dccb;text-align:center;padding:9px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.07)}
+header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.88);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(16px)}
 .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px;color:white}
 .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
 .brand-logo{height:50px;width:50px;border:1px solid rgba(216,183,126,.45);border-radius:8px;object-fit:cover;display:block;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
@@ -52,7 +52,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(33,25,20,.97);border-bo
 .menu-toggle{display:none;background:none;border:1px solid #69513d;color:white;padding:8px 12px;font-size:21px}
 
 /* Hero — Full-Bleed 3D Experience */
-.hero{position:relative;min-height:92vh;background:#140e0a;color:white;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hero{position:relative;min-height:92vh;background:#000000;color:white;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .hero-spline-bg{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:hidden}
 .spline-full-frame{width:100%;height:100%;border:0;display:block;background:#140e0a}
 .hero-spline-gradient{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,14,10,.95) 0%,rgba(20,14,10,.84) 38%,rgba(20,14,10,.48) 65%,rgba(20,14,10,.12) 100%);pointer-events:none;z-index:2}
@@ -1084,17 +1084,16 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 <main>
 <!-- Scroll-Driven 3D Hero Section -->
 <div id="home"></div>
-<section id="hero" class="relative w-full min-h-[92vh] sm:min-h-screen bg-[#0d0d0d] flex items-center justify-center overflow-hidden">
-    <!-- Full-Bleed Hero Background Video Layer -->
+<section id="hero" class="relative w-full min-h-[92vh] sm:min-h-screen bg-black flex items-center justify-center overflow-hidden">
+    <!-- Full-Bleed Hero Background Video Layer (Bright, Crisp & Highly Visible) -->
     <div class="absolute inset-0 z-0 overflow-hidden">
         <video id="hero-video" class="w-full h-full object-cover object-center" autoplay loop muted playsinline poster="assets/stone-and-sculptures/stone-sculptures-01.jpeg">
             <source src="assets/hero.mp4" type="video/mp4">
         </video>
         
-        <!-- Cinematic Dark Vignette & Gradient Overlays for Readability -->
-        <div class="absolute inset-0 bg-gradient-to-r from-[#0d0d0d]/95 via-[#0d0d0d]/70 to-[#0d0d0d]/35 pointer-events-none z-1"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/80 pointer-events-none z-1"></div>
-        <div class="absolute inset-0 bg-black/25 pointer-events-none z-1"></div>
+        <!-- Minimal Non-Intrusive Vignette: Keeps video vibrant while text remains crystal-clear -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent pointer-events-none z-1"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none z-1"></div>
     </div>
 
     <!-- Overlay Hero Content -->
@@ -1102,42 +1101,28 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
         
         <!-- Top / Left Hero Heading & CTAs -->
         <div class="pt-16 sm:pt-20 max-w-2xl opacity-0 transform -translate-y-4" id="hero-title-group">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stonegold/15 border border-stonegold/35 text-stonegold font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase mb-4 shadow-lg backdrop-blur-md">
-                <span class="w-1.5 h-1.5 rounded-full bg-stonegold animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-white/20 text-[#f5e6cc] font-mono text-[10px] sm:text-xs tracking-[0.25em] uppercase mb-4 shadow-lg backdrop-blur-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#d8b77e] animate-pulse"></span>
                 <span>ARCHITECTURAL STONE CRAFTSMANSHIP</span>
             </div>
-            <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+            <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
                 Timeless Stone Artistry in <span class="text-gradient">Motion</span>
             </h1>
-            <p class="text-xs sm:text-sm text-gray-300 mt-4 max-w-xl leading-relaxed">
+            <p class="text-xs sm:text-sm text-gray-100 mt-4 max-w-xl leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal">
                 From hand-carved stone mandirs to grand double height walls, marble inlay work, architectural cladding and stone murals, we manufacture and install bespoke stone creations across India.
             </p>
             <div class="flex items-center gap-4 mt-8 pointer-events-auto flex-wrap">
-                <a href="#services" class="px-7 py-3.5 rounded-full bg-[#C5A880] text-black font-semibold text-xs tracking-widest hover:bg-white transition-all shadow-xl">EXPLORE CRAFT ↗</a>
-                <a href="#gallery" class="px-7 py-3.5 rounded-full border border-[#C5A880] text-[#C5A880] font-semibold text-xs tracking-widest hover:bg-[#C5A880] hover:text-black transition-all backdrop-blur-md">WATCH VIDEOS ↗</a>
+                <a href="#services" class="px-7 py-3.5 rounded-full bg-[#d8b77e] hover:bg-white text-black font-semibold text-xs tracking-widest transition-all shadow-2xl hover:scale-105">EXPLORE CRAFT ↗</a>
+                <a href="#gallery" class="px-7 py-3.5 rounded-full bg-black/50 border border-white/30 text-white font-semibold text-xs tracking-widest hover:bg-white hover:text-black transition-all backdrop-blur-md shadow-2xl">WATCH VIDEOS ↗</a>
             </div>
         </div>
 
-        <!-- Bottom Sleek Hero Controls & Status Indicator -->
-        <div class="flex flex-wrap items-center justify-between gap-4 pt-10 pb-4 pointer-events-auto">
-            <div class="flex items-center gap-3">
-                <span id="hero-stage-badge" class="px-4 py-2 rounded-full glass-panel border border-stonegold/40 text-stonegold font-mono text-[11px] sm:text-xs tracking-widest uppercase shadow-xl flex items-center gap-2 backdrop-blur-md">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>CINEMATIC SHOWCASE · CRAFT IN MOTION</span>
-                </span>
-            </div>
-
-            <!-- Video Controls (Mute / Unmute & Play / Pause) -->
-            <div class="flex items-center gap-2.5 sm:gap-3">
-                <button type="button" id="hero-sound-toggle" class="px-4 py-2 rounded-full glass-panel border border-stonegold/40 text-stonegold font-mono text-[11px] sm:text-xs tracking-wider uppercase shadow-xl flex items-center gap-2 backdrop-blur-md hover:bg-white/10 hover:border-stonegold transition-all" aria-label="Toggle Hero Video Sound">
-                    <span id="hero-sound-icon">🔇</span>
-                    <span id="hero-sound-text">UNMUTE AUDIO</span>
-                </button>
-                <button type="button" id="hero-play-toggle" class="px-4 py-2 rounded-full glass-panel border border-stonegold/40 text-stonegold font-mono text-[11px] sm:text-xs tracking-wider uppercase shadow-xl flex items-center gap-2 backdrop-blur-md hover:bg-white/10 hover:border-stonegold transition-all" aria-label="Play or Pause Hero Video">
-                    <span id="hero-play-icon">⏸</span>
-                    <span id="hero-play-text">PAUSE</span>
-                </button>
-            </div>
+        <!-- Bottom Status Indicator -->
+        <div class="flex items-center pt-10 pb-4 pointer-events-auto">
+            <span id="hero-stage-badge" class="px-4 py-2 rounded-full bg-black/50 border border-white/20 text-[#f5e6cc] font-mono text-[11px] sm:text-xs tracking-widest uppercase shadow-xl flex items-center gap-2 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>CINEMATIC SHOWCASE · CRAFT IN MOTION</span>
+            </span>
         </div>
     </div>
 </section>
@@ -2577,57 +2562,16 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 
 
   // ==========================================
-  // Hero Video Audio & Playback Controls
+  // Hero Video & Heading Animation
   // ==========================================
   (() => {
     const heroVideo = document.getElementById('hero-video');
-    const soundToggle = document.getElementById('hero-sound-toggle');
-    const soundIcon = document.getElementById('hero-sound-icon');
-    const soundText = document.getElementById('hero-sound-text');
-    const playToggle = document.getElementById('hero-play-toggle');
-    const playIcon = document.getElementById('hero-play-icon');
-    const playText = document.getElementById('hero-play-text');
-
     if (heroVideo) {
       heroVideo.muted = true;
       const playPromise = heroVideo.play();
       if (playPromise !== undefined) {
         playPromise.catch(err => {
           console.log('Autoplay prevented by browser:', err);
-        });
-      }
-
-      if (soundToggle) {
-        soundToggle.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (heroVideo.muted) {
-            heroVideo.muted = false;
-            if (soundIcon) soundIcon.textContent = '🔊';
-            if (soundText) soundText.textContent = 'MUTE AUDIO';
-            soundToggle.style.borderColor = '#d8b77e';
-            soundToggle.style.background = 'rgba(216, 183, 126, 0.2)';
-          } else {
-            heroVideo.muted = true;
-            if (soundIcon) soundIcon.textContent = '🔇';
-            if (soundText) soundText.textContent = 'UNMUTE AUDIO';
-            soundToggle.style.borderColor = '';
-            soundToggle.style.background = '';
-          }
-        });
-      }
-
-      if (playToggle) {
-        playToggle.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (heroVideo.paused) {
-            heroVideo.play();
-            if (playIcon) playIcon.textContent = '⏸';
-            if (playText) playText.textContent = 'PAUSE';
-          } else {
-            heroVideo.pause();
-            if (playIcon) playIcon.textContent = '▶';
-            if (playText) playText.textContent = 'PLAY';
-          }
         });
       }
     }
