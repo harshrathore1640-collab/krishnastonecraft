@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17110d">
+<meta name="description" content="Krishna Stone Craft — Stone Wall Mural Gallery. Monumental high-relief stone murals hand-carved from solid natural stone blocks. Featuring devotional epics, divine deities, heritage motifs, flora and fauna relief, and contemporary abstract stone artwork for grand entrance lobbies and prayer halls.">
+<title>Stone Wall Mural Gallery | Krishna Stone Craft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/jpeg" href="assets/logo/logo.jpg">
+  <link rel="apple-touch-icon" href="assets/logo/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark: #17110d;
+  --dark2: #211914;
+  --cardstone: #1a1410;
+  --brown: #76533b;
+  --sand: #c8a47b;
+  --gold: #d8b77e;
+  --stonegold: #C5A880;
+  --ivory: #f7f1e8;
+  --cream: #ede1d0;
+  --text: #f7f1e8;
+  --muted: #a69585;
+  --line: rgba(216, 183, 126, 0.22);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font: inherit; cursor: pointer; }
+.container { width: min(1260px, 92%); margin: auto; }
+
+/* Announcement */
+.announcement {
+  background: #0f0a07;
+  color: var(--gold);
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(216, 183, 126, 0.15);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(23, 17, 13, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-logo {
+  height: 48px;
+  width: 48px;
+  border: 1px solid rgba(216, 183, 126, 0.45);
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.brand:hover .brand-logo {
+  transform: scale(1.05);
+  border-color: var(--gold);
+  box-shadow: 0 6px 18px rgba(216, 183, 126, 0.4);
+}
+.brand-name {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  color: #fff;
+}
+.brand-sub {
+  font-size: 8px;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--stonegold);
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #d8c8b8;
+}
+.nav-links a:hover {
+  color: var(--gold);
+}
+.btn-back-hub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.btn-header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--gold);
+  color: #17110d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  border-radius: 2px;
+  transition: .25s;
+}
+.btn-header-cta:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* Category Hero */
+.category-hero {
+  position: relative;
+  padding: 60px 0 50px;
+  background: linear-gradient(180deg, #1f1712 0%, #17110d 100%);
+  border-bottom: 1px solid var(--line);
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.breadcrumb a { color: var(--gold); }
+.category-hero-content {
+  max-width: 900px;
+}
+.division-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(216, 183, 126, 0.12);
+  border: 1px solid var(--line);
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+.category-hero h1 {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4.6vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.category-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.category-hero-desc {
+  font-size: 13px;
+  color: #c9b8a8;
+  line-height: 1.85;
+  max-width: 780px;
+  margin-bottom: 26px;
+}
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.hero-highlight-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(33, 25, 20, 0.85);
+  border: 1px solid rgba(216, 183, 126, 0.25);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #ede2d5;
+}
+.highlight-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background: var(--gold);
+  color: #17110d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: .25s;
+}
+.btn-primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: .25s;
+}
+.btn-secondary:hover {
+  background: var(--gold);
+  color: #17110d;
+  transform: translateY(-2px);
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 60px 0 80px;
+}
+.gallery-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.gallery-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  color: #fff;
+}
+.gallery-header p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.gallery-count-badge {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--gold);
+  background: #211914;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+.gallery-card {
+  background: var(--cardstone);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 16px 36px rgba(0,0,0,.65);
+}
+.gallery-card-image-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #110c09;
+}
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.gallery-card:hover .gallery-card-img {
+  transform: scale(1.08);
+}
+.gallery-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(18, 12, 8, 0.88);
+  backdrop-filter: blur(6px);
+  color: var(--gold);
+  border: 1px solid rgba(216, 183, 126, 0.4);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-family: monospace;
+}
+.gallery-zoom-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(23, 17, 13, 0.92);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 6px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all .25s ease;
+}
+.gallery-card:hover .gallery-zoom-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-zoom-btn:hover {
+  background: var(--gold);
+  color: #17110d;
+}
+.gallery-card-footer {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #1e1712;
+  border-top: 1px solid rgba(216, 183, 126, 0.15);
+  margin-top: auto;
+}
+.gallery-card-category {
+  font-size: 9px;
+  color: var(--stonegold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+}
+.gallery-card-title {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.gallery-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 13px;
+  background: var(--gold);
+  color: #17110d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: .2s;
+  flex-shrink: 0;
+}
+.gallery-card-btn:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+/* Other Divisions Switcher */
+.other-divisions-section {
+  padding: 60px 0 80px;
+  background: #140e0a;
+  border-top: 1px solid var(--line);
+}
+.other-divisions-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.other-divisions-heading span {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.other-divisions-heading h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: #fff;
+  margin-top: 6px;
+}
+.other-divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.other-division-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #1c140f;
+  border: 1px solid rgba(216, 183, 126, 0.2);
+  border-radius: 3px;
+  transition: all .25s ease;
+}
+.other-division-card:hover {
+  border-color: var(--gold);
+  background: #251b14;
+  transform: translateX(4px);
+}
+.other-div-num {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(216, 183, 126, 0.35);
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+}
+.other-div-info h4 {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: #fff;
+}
+.other-div-info span {
+  font-size: 10px;
+  color: var(--stonegold);
+  letter-spacing: 1px;
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(10, 7, 5, 0.95);
+  backdrop-filter: blur(14px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+.lightbox-window {
+  position: relative;
+  max-width: 1050px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: #17110d;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0,0,0,.9);
+}
+.lightbox-header {
+  padding: 16px 22px;
+  background: #1f1712;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lightbox-header h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: #fff;
+}
+.lightbox-close {
+  background: #251b14;
+  border: 1px solid var(--line);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  transition: .2s;
+}
+.lightbox-close:hover {
+  background: var(--gold);
+  color: #17110d;
+}
+.lightbox-body {
+  position: relative;
+  background: #0d0806;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 400px;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 64vh;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0,0,0,.7);
+}
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(23, 17, 13, 0.88);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: .2s;
+  cursor: pointer;
+  z-index: 10;
+}
+.lightbox-arrow:hover {
+  background: var(--gold);
+  color: #17110d;
+}
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.lightbox-footer {
+  padding: 14px 22px;
+  background: #1f1712;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lightbox-counter {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--gold);
+}
+.lightbox-inquire-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--gold);
+  color: #17110d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.lightbox-inquire-btn:hover { background: #fff; }
+
+/* Footer */
+footer {
+  background: #100b08;
+  border-top: 1px solid var(--line);
+  padding: 50px 0 24px;
+  color: #c9b8a8;
+  font-size: 11px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 30px;
+}
+.footer-brand h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-col h5 {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.footer-col a { display: block; margin-bottom: 8px; color: #a99888; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid rgba(216, 183, 126, 0.15);
+  font-size: 10px;
+}
+
+@media (max-width: 850px) {
+  .nav-links { display: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .category-hero { padding: 40px 0; }
+  .category-hero h1 { font-size: 34px; }
+  .photo-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">Handcrafted Stone Art &nbsp; · &nbsp; Manufacturing + Installation &nbsp; · &nbsp; Pan India Service</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
+      <div>
+        <div class="brand-name">KRISHNA</div>
+        <div class="brand-sub">STONE CRAFT</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#services" class="btn-back-hub">← All 10 Craft Divisions</a>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#gallery">Videos</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="btn-header-cta" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%20I%20am%20inquiring%20about%20your%20Stone%20Wall%20Mural%20division." target="_blank" rel="noopener noreferrer">
+      Discuss Project ↗
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="category-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="index.html#services">What We Create</a>
+        <span>›</span>
+        <span>Stone Wall Mural</span>
+      </div>
+
+      <div class="category-hero-content">
+        <div class="division-badge">07 / SCULPTURAL ART</div>
+        <h1>Hand-Carved Stone Wall Murals & Relief Art</h1>
+        <div class="category-hero-sub">Deep Relief Sculptural Panels, Devotional Narratives & Heritage Art</div>
+        <p class="category-hero-desc">Monumental high-relief stone murals hand-carved from solid natural stone blocks. Featuring devotional epics, divine deities, heritage motifs, flora and fauna relief, and contemporary abstract stone artwork for grand entrance lobbies and prayer halls.</p>
+
+        <div class="hero-highlights">
+          
+    <div class="hero-highlight-pill">
+      <span class="highlight-dot"></span>
+      <span>High Relief 3D Depth</span>
+    </div>
+  
+
+    <div class="hero-highlight-pill">
+      <span class="highlight-dot"></span>
+      <span>Hand-Chiseled by Master Artisans</span>
+    </div>
+  
+
+    <div class="hero-highlight-pill">
+      <span class="highlight-dot"></span>
+      <span>Solid Sandstone & Marble Slabs</span>
+    </div>
+  
+
+    <div class="hero-highlight-pill">
+      <span class="highlight-dot"></span>
+      <span>Custom Theme & Story Murals</span>
+    </div>
+  
+
+    <div class="hero-highlight-pill">
+      <span class="highlight-dot"></span>
+      <span>Seamless Panel Integration</span>
+    </div>
+  
+        </div>
+
+        <div class="hero-actions">
+          <a href="#gallery" class="btn-primary">Explore Design Gallery ↓</a>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%20I%20would%20like%20to%20inquire%20about%20customized%20Stone%20Wall%20Mural%20design%20%26%20manufacturing." target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Inquire On WhatsApp ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Grid Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <div>
+          <h2>Stone Wall Mural Portfolio</h2>
+          <p>Browse authentic photographs of our handcrafted installations and manufactured designs.</p>
+        </div>
+        <div class="gallery-count-badge">SHOWING 20 DESIGNS</div>
+      </div>
+
+      <div class="photo-grid">
+        
+      <article class="gallery-card" data-index="0">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-01.jpeg" alt="Stone Wall Mural Design #01" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#01</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-01.jpeg" data-caption="Stone Wall Mural — Design #01" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #01</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2301%20(assets%2Fwall-mural%2Fwall-mural-01.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="1">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-02.jpeg" alt="Stone Wall Mural Design #02" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#02</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-02.jpeg" data-caption="Stone Wall Mural — Design #02" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #02</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2302%20(assets%2Fwall-mural%2Fwall-mural-02.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="2">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-03.jpeg" alt="Stone Wall Mural Design #03" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#03</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-03.jpeg" data-caption="Stone Wall Mural — Design #03" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #03</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2303%20(assets%2Fwall-mural%2Fwall-mural-03.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="3">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-04.jpeg" alt="Stone Wall Mural Design #04" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#04</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-04.jpeg" data-caption="Stone Wall Mural — Design #04" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #04</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2304%20(assets%2Fwall-mural%2Fwall-mural-04.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="4">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-05.jpeg" alt="Stone Wall Mural Design #05" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#05</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-05.jpeg" data-caption="Stone Wall Mural — Design #05" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #05</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2305%20(assets%2Fwall-mural%2Fwall-mural-05.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="5">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-06.jpeg" alt="Stone Wall Mural Design #06" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#06</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-06.jpeg" data-caption="Stone Wall Mural — Design #06" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #06</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2306%20(assets%2Fwall-mural%2Fwall-mural-06.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="6">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-07.jpeg" alt="Stone Wall Mural Design #07" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#07</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-07.jpeg" data-caption="Stone Wall Mural — Design #07" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #07</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2307%20(assets%2Fwall-mural%2Fwall-mural-07.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="7">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-08.jpeg" alt="Stone Wall Mural Design #08" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#08</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-08.jpeg" data-caption="Stone Wall Mural — Design #08" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #08</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2308%20(assets%2Fwall-mural%2Fwall-mural-08.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="8">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-09.jpeg" alt="Stone Wall Mural Design #09" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#09</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-09.jpeg" data-caption="Stone Wall Mural — Design #09" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #09</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2309%20(assets%2Fwall-mural%2Fwall-mural-09.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="9">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-10.jpeg" alt="Stone Wall Mural Design #10" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#10</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-10.jpeg" data-caption="Stone Wall Mural — Design #10" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #10</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2310%20(assets%2Fwall-mural%2Fwall-mural-10.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="10">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-11.jpeg" alt="Stone Wall Mural Design #11" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#11</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-11.jpeg" data-caption="Stone Wall Mural — Design #11" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #11</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2311%20(assets%2Fwall-mural%2Fwall-mural-11.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="11">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-12.jpeg" alt="Stone Wall Mural Design #12" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#12</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-12.jpeg" data-caption="Stone Wall Mural — Design #12" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #12</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2312%20(assets%2Fwall-mural%2Fwall-mural-12.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="12">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-13.jpeg" alt="Stone Wall Mural Design #13" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#13</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-13.jpeg" data-caption="Stone Wall Mural — Design #13" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #13</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2313%20(assets%2Fwall-mural%2Fwall-mural-13.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="13">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-14.jpeg" alt="Stone Wall Mural Design #14" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#14</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-14.jpeg" data-caption="Stone Wall Mural — Design #14" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #14</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2314%20(assets%2Fwall-mural%2Fwall-mural-14.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="14">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-15.jpeg" alt="Stone Wall Mural Design #15" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#15</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-15.jpeg" data-caption="Stone Wall Mural — Design #15" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #15</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2315%20(assets%2Fwall-mural%2Fwall-mural-15.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="15">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-16.jpeg" alt="Stone Wall Mural Design #16" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#16</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-16.jpeg" data-caption="Stone Wall Mural — Design #16" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #16</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2316%20(assets%2Fwall-mural%2Fwall-mural-16.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="16">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-17.jpeg" alt="Stone Wall Mural Design #17" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#17</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-17.jpeg" data-caption="Stone Wall Mural — Design #17" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #17</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2317%20(assets%2Fwall-mural%2Fwall-mural-17.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="17">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-18.jpeg" alt="Stone Wall Mural Design #18" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#18</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-18.jpeg" data-caption="Stone Wall Mural — Design #18" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #18</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2318%20(assets%2Fwall-mural%2Fwall-mural-18.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="18">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-19.jpeg" alt="Stone Wall Mural Design #19" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#19</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-19.jpeg" data-caption="Stone Wall Mural — Design #19" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #19</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2319%20(assets%2Fwall-mural%2Fwall-mural-19.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+
+      <article class="gallery-card" data-index="19">
+        <div class="gallery-card-image-wrap">
+          <img src="assets/wall-mural/wall-mural-20.jpeg" alt="Stone Wall Mural Design #20" loading="lazy" class="gallery-card-img">
+          <div class="gallery-card-badge">#20</div>
+          <button type="button" class="gallery-zoom-btn" data-full="assets/wall-mural/wall-mural-20.jpeg" data-caption="Stone Wall Mural — Design #20" aria-label="Explore High-Resolution Design">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Zoom</span>
+          </button>
+        </div>
+        <div class="gallery-card-footer">
+          <div class="gallery-card-meta">
+            <span class="gallery-card-category">07 / SCULPTURAL ART</span>
+            <h3 class="gallery-card-title">Stone Wall Mural #20</h3>
+          </div>
+          <a href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft%2C%0A%0AI%20am%20interested%20in%20Stone%20Wall%20Mural%20Design%20%2320%20(assets%2Fwall-mural%2Fwall-mural-20.jpeg).%0A%0APlease%20share%20design%20dimensions%2C%20stone%20material%20options%2C%20and%20quotation%20details." target="_blank" rel="noopener noreferrer" class="gallery-card-btn" title="Enquire about this design on WhatsApp">
+            <span>Enquire</span> ↗
+          </a>
+        </div>
+      </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Divisions Switcher -->
+  <section class="other-divisions-section">
+    <div class="container">
+      <div class="other-divisions-heading">
+        <span>Explore More Specialisations</span>
+        <h3>Discover Our Other 9 Divisions</h3>
+      </div>
+      <div class="other-divisions-grid">
+        
+    <a href="mandir.html" class="other-division-card">
+      <div class="other-div-num">01</div>
+      <div class="other-div-info">
+        <h4>Stone Mandir</h4>
+        <span>5 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="god-idols.html" class="other-division-card">
+      <div class="other-div-num">02</div>
+      <div class="other-div-info">
+        <h4>God Idols</h4>
+        <span>10 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="double-height-wall.html" class="other-division-card">
+      <div class="other-div-num">03</div>
+      <div class="other-div-info">
+        <h4>Double Height Wall</h4>
+        <span>5 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="landscape.html" class="other-division-card">
+      <div class="other-div-num">04</div>
+      <div class="other-div-info">
+        <h4>Stone Landscape</h4>
+        <span>20 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="marble-inlay-work.html" class="other-division-card">
+      <div class="other-div-num">05</div>
+      <div class="other-div-info">
+        <h4>Marble Inlay Work</h4>
+        <span>20 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="stone-cladding.html" class="other-division-card">
+      <div class="other-div-num">06</div>
+      <div class="other-div-info">
+        <h4>Stone Cladding</h4>
+        <span>20 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="stone-wall-design.html" class="other-division-card">
+      <div class="other-div-num">08</div>
+      <div class="other-div-info">
+        <h4>Stone Wall Design</h4>
+        <span>20 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="stone-and-sculptures.html" class="other-division-card">
+      <div class="other-div-num">09</div>
+      <div class="other-div-info">
+        <h4>Stone & Sculptures</h4>
+        <span>20 Designs ↗</span>
+      </div>
+    </a>
+  
+
+    <a href="artifacts.html" class="other-division-card">
+      <div class="other-div-num">10</div>
+      <div class="other-div-info">
+        <h4>Stone Artifacts</h4>
+        <span>5 Designs ↗</span>
+      </div>
+    </a>
+  
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+  <div class="lightbox-window">
+    <div class="lightbox-header">
+      <h4 id="lightboxCaption">Stone Wall Mural</h4>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+    </div>
+    <div class="lightbox-body">
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+      <img id="lightboxImg" src="" alt="High resolution craft preview" class="lightbox-img">
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    </div>
+    <div class="lightbox-footer">
+      <span class="lightbox-counter" id="lightboxCounter">1 / 20</span>
+      <a href="#" id="lightboxInquire" target="_blank" rel="noopener noreferrer" class="lightbox-inquire-btn">
+        Enquire On WhatsApp ↗
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" style="margin-bottom: 14px; display: inline-flex;">
+          <img src="assets/logo/logo.jpg" alt="Krishna Stone Craft" class="brand-logo">
+          <div>
+            <div class="brand-name" style="font-size: 20px;">Krishna Stone Craft</div>
+            <div class="brand-sub">The Art of Natural Stone</div>
+          </div>
+        </a>
+        <p>Direct manufacturers and turnkey installers of authentic hand-carved stone mandirs, god idols, double-height walls, marble inlays, cladding, murals and sculptures across India.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Craft Specialisations</h5>
+        <a href="mandir.html">Stone Mandir</a>
+        <a href="god-idols.html">God Idols</a>
+        <a href="double-height-wall.html">Double Height Wall</a>
+        <a href="landscape.html">Stone Landscape</a>
+        <a href="marble-inlay-work.html">Marble Inlay Work</a>
+        <a href="stone-cladding.html">Stone Cladding</a>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="index.html#home">Home Page</a>
+        <a href="index.html#services">What We Create</a>
+        <a href="index.html#projects">Signature Projects</a>
+        <a href="index.html#gallery">Craft Videos</a>
+        <a href="index.html#contact">Discuss Project</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Krishna Stone Craft. All rights reserved.</div>
+      <div>Handcrafted in Rajasthan · Installed Pan India</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const imageList = ["assets/wall-mural/wall-mural-01.jpeg","assets/wall-mural/wall-mural-02.jpeg","assets/wall-mural/wall-mural-03.jpeg","assets/wall-mural/wall-mural-04.jpeg","assets/wall-mural/wall-mural-05.jpeg","assets/wall-mural/wall-mural-06.jpeg","assets/wall-mural/wall-mural-07.jpeg","assets/wall-mural/wall-mural-08.jpeg","assets/wall-mural/wall-mural-09.jpeg","assets/wall-mural/wall-mural-10.jpeg","assets/wall-mural/wall-mural-11.jpeg","assets/wall-mural/wall-mural-12.jpeg","assets/wall-mural/wall-mural-13.jpeg","assets/wall-mural/wall-mural-14.jpeg","assets/wall-mural/wall-mural-15.jpeg","assets/wall-mural/wall-mural-16.jpeg","assets/wall-mural/wall-mural-17.jpeg","assets/wall-mural/wall-mural-18.jpeg","assets/wall-mural/wall-mural-19.jpeg","assets/wall-mural/wall-mural-20.jpeg"];
+  const catTitle = "Stone Wall Mural";
+  const phoneNumber = "919672739036";
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxInquire = document.getElementById('lightboxInquire');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  let currentIndex = 0;
+
+  function showLightbox(index) {
+    if (index < 0) index = imageList.length - 1;
+    if (index >= imageList.length) index = 0;
+    currentIndex = index;
+
+    const src = imageList[currentIndex];
+    const num = String(currentIndex + 1).padStart(2, '0');
+    lightboxImg.src = src;
+    lightboxCaption.textContent = catTitle + ' — Design #' + num;
+    lightboxCounter.textContent = (currentIndex + 1) + ' / ' + imageList.length;
+
+    const waText = encodeURIComponent('Hello Krishna Stone Craft,\n\nI am interested in ' + catTitle + ' Design #' + num + ' (' + src + ').\n\nPlease share sizing options and quotation details.');
+    lightboxInquire.href = 'https://wa.me/' + phoneNumber + '?text=' + waText;
+
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hideLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Bind Zoom buttons
+  document.querySelectorAll('.gallery-zoom-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.gallery-card');
+      const idx = parseInt(card.dataset.index, 10);
+      showLightbox(idx);
+    });
+  });
+
+  // Clicking image card opens lightbox
+  document.querySelectorAll('.gallery-card-image-wrap').forEach((wrap) => {
+    wrap.addEventListener('click', () => {
+      const card = wrap.closest('.gallery-card');
+      const idx = parseInt(card.dataset.index, 10);
+      showLightbox(idx);
+    });
+  });
+
+  lightboxClose.addEventListener('click', hideLightbox);
+  lightboxPrev.addEventListener('click', () => showLightbox(currentIndex - 1));
+  lightboxNext.addEventListener('click', () => showLightbox(currentIndex + 1));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) hideLightbox();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') hideLightbox();
+    if (e.key === 'ArrowLeft') showLightbox(currentIndex - 1);
+    if (e.key === 'ArrowRight') showLightbox(currentIndex + 1);
+  });
+})();
+</script>
+</body>
+</html>
