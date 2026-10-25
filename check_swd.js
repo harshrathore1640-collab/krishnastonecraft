@@ -12,3 +12,4 @@ files.forEach((f, i) => {
   const size = fs.statSync(full).size;
   console.log(`${i+1}. ${f} (${size} bytes)`);
 });
+
