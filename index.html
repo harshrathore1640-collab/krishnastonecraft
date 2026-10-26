@@ -1146,6 +1146,103 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+
+<style id="responsive-polish-overrides">
+/* Responsive layout safety */
+*,*::before,*::after{box-sizing:border-box}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+img,video,iframe,canvas,svg{max-width:100%}
+.container{width:min(1200px,92%);margin-inline:auto}
+section{min-width:0}
+section h1, section h2, section h3,
+.heading h2,.heading p,.heading .eyebrow{ text-align:center }
+.heading .eyebrow{justify-content:center}
+.hero-title-group,#hero-title-group{
+  width:100%;max-width:920px;margin-inline:auto;
+  text-align:center;padding-top:clamp(2rem,6vh,5rem)!important;
+  padding-bottom:clamp(1.5rem,5vh,4rem);
+}
+#hero-title-group h1{
+  width:100%;max-width:900px;margin:0 auto!important;
+  text-align:center!important;
+  font-size:clamp(2.15rem,6.2vw,5.1rem)!important;
+  line-height:1.08!important;letter-spacing:-.025em;
+  text-wrap:balance;
+}
+.hero-tagline-subtitle{
+  color:#f3e5d0;text-align:center;font-size:clamp(.9rem,1.7vw,1.15rem);
+  line-height:1.6;letter-spacing:.035em;margin:18px auto 0;
+  max-width:720px;padding-inline:8px;
+}
+#hero-title-group>div{justify-content:center!important;margin-top:clamp(2rem,5vh,4rem)!important}
+#hero-title-group>div a{width:auto;min-width:170px;max-width:100%;pointer-events:auto}
+#hero .relative.z-20{align-items:center!important;justify-content:center!important;padding-top:clamp(1rem,4vh,3rem)!important;padding-bottom:clamp(2rem,7vh,5rem)!important}
+.hero-statement-text{text-align:center}
+.service-grid,.process-grid,.work-grid,.about-grid,.contact-grid,.footer-grid,
+.form-grid,.craft-spaces-grid,.gallery-photo-grid{min-width:0}
+.service-card,.process-card,.video-card,.work-large,.work-tile,.about-visual,
+.contact-form,.contact-copy,.footer-col{min-width:0}
+video{max-width:100%}
+@media(max-width:850px){
+ .hero-full-content{grid-template-columns:minmax(0,1fr)!important}
+ .hero-floating-exhibition{height:360px}
+ .work-grid,.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)!important}
+ .service-grid,.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .hero-spline-gradient{background:linear-gradient(180deg,rgba(20,14,10,.48),rgba(20,14,10,.7))!important}
+}
+@media(max-width:600px){
+ .container{width:92%!important;max-width:100%}
+ .section{padding:clamp(38px,9vw,52px) 0!important}
+ .heading{width:100%;text-align:center!important}
+ .heading h2{font-size:clamp(1.85rem,8vw,2.5rem)!important;line-height:1.12}
+ .heading p{font-size:12px;line-height:1.75}
+ .hero-title-group,#hero-title-group{padding:1.5rem 0 2.5rem!important}
+ #hero-title-group h1{font-size:clamp(2.05rem,9vw,3.2rem)!important;line-height:1.12!important}
+ .hero-tagline-subtitle{font-size:.9rem;line-height:1.6;margin-top:14px}
+ #hero{min-height:88svh!important}
+ #hero .relative.z-20{min-height:84svh!important;padding:1.25rem 1rem 3rem!important}
+ #hero-title-group>div{margin-top:2.25rem!important;align-items:center!important}
+ #hero-title-group>div a{width:auto!important;min-width:165px;padding:13px 22px!important}
+ .service-grid,.process-grid,.footer-grid{grid-template-columns:minmax(0,1fr)!important}
+ .work-grid,.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)!important;gap:22px!important}
+ .work-large{height:280px!important}
+ .work-side{grid-template-columns:minmax(0,1fr)!important}
+ .about-visual{height:270px!important}
+ .about-copy h2,.contact-copy h2,.cta h2{font-size:clamp(1.9rem,8vw,2.5rem)!important;text-align:center!important}
+ .about-copy .eyebrow,.contact-copy .eyebrow,.cta .eyebrow{justify-content:center}
+ .about-copy,.contact-copy{text-align:center}
+ .about-points{grid-template-columns:minmax(0,1fr)!important}
+ .video-header-bar{align-items:stretch!important}
+ .video-card{flex:0 0 100%!important;max-width:100%!important}
+ .video-player-container{height:auto!important;aspect-ratio:16/9}
+ .cta-inner{align-items:center!important;text-align:center!important}
+ .contact-form{width:100%;padding:20px 15px!important}
+ .form-grid{grid-template-columns:minmax(0,1fr)!important}
+ .field.full{grid-column:auto!important}
+ .footer-grid{gap:22px!important}
+ .footer-bottom{align-items:center}
+ .photo-modal-window{width:100%;max-width:100%;max-height:96svh}
+ .modal-header{padding:12px!important}
+ .modal-title{font-size:20px!important}
+ .slide-stage{padding:10px 32px!important;min-height:180px!important}
+ .slide-main-image{max-width:100%;max-height:38svh!important;object-fit:contain}
+ .modal-body-grid{padding:12px!important}
+ .gallery-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .modal-header-actions{flex-wrap:wrap;gap:8px}
+ .modal-view-tabs{max-width:100%}
+ .view-tab{padding:7px 9px;font-size:9px}
+ .craft-spaces-grid{grid-template-columns:minmax(0,1fr)!important}
+ .craft-pills-bar{max-width:100%;overflow-x:auto}
+ .hero-statement-text{padding-inline:8px}
+}
+@media(max-width:360px){
+ #hero-title-group h1{font-size:1.9rem!important}
+ .brand-name{font-size:17px!important}
+ .modal-title{font-size:18px!important}
+}
+</style>
+
 </head>
 <body>
 
@@ -1223,8 +1320,9 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
         <!-- Top / Left Hero Heading & CTAs -->
         <div class="pt-8 sm:pt-12 max-w-2xl opacity-0 transform -translate-y-4" id="hero-title-group">
             <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] break-words">
-                Timeless Stone Artistry in <span class="text-gradient">Motion</span>
+                Where Stone Becomes a Timeless Masterpiece
             </h1>
+            <p class="hero-tagline-subtitle">Handcrafted with Heritage. Designed for Generations.</p>
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-8 pointer-events-auto">
                 <a href="#services" class="w-full sm:w-auto text-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#d8b77e] hover:bg-white text-black font-semibold text-xs tracking-widest transition-all shadow-2xl hover:scale-105">EXPLORE CRAFT ↗</a>
             </div>
