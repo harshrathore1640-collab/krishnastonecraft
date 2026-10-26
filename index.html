@@ -322,6 +322,22 @@ header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.88);border-bo
   background:#0d0a08;
   outline:none;
 }
+/* Completely remove native volume slider and speaker icon */
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-control-container,
+video::-webkit-media-controls-volume-slider-container {
+  display:none !important;
+  -webkit-appearance:none !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  width:0 !important;
+  height:0 !important;
+}
+#hero-video {
+  transform: scale(1.08);
+  transform-origin: center top;
+}
 .video-badge{
   position:absolute;
   top:12px;
@@ -462,9 +478,12 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 
 /* Floating actions */
 .floating{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;flex-direction:column;gap:9px}
-.float-btn{height:47px;width:47px;border-radius:50%;display:grid;place-items:center;border:0;color:white;font-size:19px;box-shadow:0 4px 15px #0003;cursor:pointer}
-.float-whatsapp{background:#218c50}
-.float-top{background:var(--dark)}
+.float-btn{height:47px;width:47px;border-radius:50%;display:grid;place-items:center;border:0;color:white;font-size:19px;box-shadow:0 4px 15px rgba(0,0,0,0.3);cursor:pointer;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.float-btn:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(0,0,0,0.4)}
+.float-btn svg{display:block;pointer-events:none}
+.float-whatsapp{background:#25d366}
+.float-call{background:#1d4ed8}
+.float-top{background:var(--dark);border:1px solid rgba(216,183,126,0.3)}
 
 @media(max-width:850px){
  .nav-links, .nav > .btn { display: none; }
@@ -1189,7 +1208,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 <section id="hero" class="relative w-full min-h-[92vh] sm:min-h-screen bg-black flex items-center justify-center overflow-hidden">
     <!-- Full-Bleed Hero Background Video Layer (Bright, Crisp & Highly Visible) -->
     <div class="absolute inset-0 z-0 overflow-hidden">
-        <video id="hero-video" class="w-full h-full object-cover object-center" autoplay loop muted playsinline poster="assets/stone-and-sculptures/stone-sculptures-01.jpeg">
+        <video id="hero-video" class="w-full h-full object-cover object-center pointer-events-none scale-105 sm:scale-110 origin-top" autoplay loop muted playsinline poster="assets/stone-and-sculptures/stone-sculptures-01.jpeg">
             <source src="assets/hero.mp4" type="video/mp4">
         </video>
         
@@ -1759,7 +1778,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     <div class="video-slider-track" id="videoTrack">
     <article class="video-card" data-category="mandir">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/mandir-video-01.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/mandir-video-01.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Mandir</span>
@@ -1774,7 +1793,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-cladding">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-cladding-video-01.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-cladding-video-01.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Cladding</span>
@@ -1789,7 +1808,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-cladding">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-cladding-video-02.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-cladding-video-02.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Cladding</span>
@@ -1804,7 +1823,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-cladding">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-cladding-video-03.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-cladding-video-03.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Cladding</span>
@@ -1819,7 +1838,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-cladding">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-cladding-video-04.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-cladding-video-04.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Cladding</span>
@@ -1834,7 +1853,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-cladding">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-cladding-video-05.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-cladding-video-05.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Cladding</span>
@@ -1849,7 +1868,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="landscape">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/landscape-video-01.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/landscape-video-01.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Landscape</span>
@@ -1864,7 +1883,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="landscape">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/landscape-video-02.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/landscape-video-02.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone Landscape</span>
@@ -1879,7 +1898,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="marble-inlay-work">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/marble-inlay-video-01.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/marble-inlay-video-01.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Marble Inlay Work</span>
@@ -1894,7 +1913,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-and-sculptures">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-sculptures-video-01.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-sculptures-video-01.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone & Sculptures</span>
@@ -1909,7 +1928,7 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
     </article>
     <article class="video-card" data-category="stone-and-sculptures">
       <div class="video-player-container">
-        <video controls playsinline preload="metadata" src="assets/videos/stone-sculptures-video-02.mp4">
+        <video controls playsinline preload="metadata" muted controlsList="nodownload novolume noplaybackrate" src="assets/videos/stone-sculptures-video-02.mp4">
           Your browser does not support the video tag.
         </video>
         <span class="video-badge">Stone & Sculptures</span>
@@ -2099,8 +2118,15 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
 </div>
 
 <div class="floating">
- <a class="float-btn float-whatsapp" href="https://wa.me/919672739036" target="_blank" rel="noopener" aria-label="WhatsApp Krishna Stone Craft">✆</a>
- <button class="float-btn float-top" id="backTop" aria-label="Back to top">↑</button>
+ <a class="float-btn float-call" href="tel:+919672739036" aria-label="Call Krishna Stone Craft" title="Call +91 96727 39036">
+   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.93c0-.53-.44-.93-.97-.93H4.07c-.55 0-1.02.43-1.02.98 0 9.39 7.63 17.02 17.02 17.02.55 0 .94-.47.94-1.02v-3.61c0-.52-.4-.99-.97-.99z"/></svg>
+ </a>
+ <a class="float-btn float-whatsapp" href="https://wa.me/919672739036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Krishna Stone Craft" title="Chat on WhatsApp">
+   <svg width="23" height="23" viewBox="0 0 24 24" fill="white"><path d="M12.031 0C5.397 0 .017 5.38.017 12.015c0 2.118.552 4.185 1.602 6.007L0 24l6.166-1.618a11.968 11.968 0 0 0 5.865 1.533h.005c6.632 0 12.012-5.38 12.017-12.016A11.954 11.954 0 0 0 20.57 3.52 11.96 11.96 0 0 0 12.031 0zm0 2.003a9.98 9.98 0 0 1 7.07 2.934 9.98 9.98 0 0 1 2.93 7.078c-.004 5.53-4.498 10.024-10.027 10.024a10.02 10.02 0 0 1-5.11-1.397l-.366-.218-3.668.962.978-3.576-.238-.38a9.99 9.99 0 0 1-1.53-5.49c0-5.532 4.496-10.027 10.03-10.027zm-2.82 4.908c-.198 0-.428.075-.65.317-.223.243-.852.833-.852 2.031 0 1.198.873 2.353.996 2.518.122.164 1.717 2.622 4.16 3.678 2.032.879 2.446.704 2.888.665.443-.04 1.428-.584 1.629-1.15.202-.566.202-1.05.141-1.15-.06-.1-.22-.16-.462-.28-.242-.122-1.428-.705-1.65-.785-.222-.081-.383-.122-.544.122-.162.243-.624.785-.765.947-.141.162-.282.182-.524.06-.242-.12-1.024-.378-1.95-1.203-.721-.643-1.208-1.438-1.35-1.68-.14-.243-.015-.374.106-.495.11-.11.242-.283.363-.425.121-.14.161-.242.242-.403.08-.162.04-.303-.02-.424-.06-.122-.544-1.313-.746-1.8-.196-.475-.395-.41-.544-.418l-.463-.008z"/></svg>
+ </a>
+ <button class="float-btn float-top" id="backTop" aria-label="Back to top" title="Scroll to top">
+   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+ </button>
 </div>
 
 <script>
@@ -2296,9 +2322,20 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
    });
  });
 
- // Only one video plays at a time
+ // Enforce all videos are always permanently muted & single video playback
  allVideos.forEach(v => {
+   v.muted = true;
+   v.volume = 0;
+   v.defaultMuted = true;
+
+   v.addEventListener("volumechange", () => {
+     if (!v.muted) v.muted = true;
+     if (v.volume > 0) v.volume = 0;
+   });
+
    v.addEventListener("play", () => {
+     v.muted = true;
+     v.volume = 0;
      allVideos.forEach(other => {
        if (other !== v && !other.paused) {
          other.pause();
@@ -2306,6 +2343,22 @@ footer{background:#17110d;color:white;padding:48px 0 20px}
      });
    });
  });
+
+ // Global capture: guarantee any video playback remains permanently muted
+ document.addEventListener("play", (e) => {
+   if (e.target && e.target.tagName === "VIDEO") {
+     e.target.muted = true;
+     e.target.volume = 0;
+     e.target.defaultMuted = true;
+   }
+ }, true);
+
+ document.addEventListener("volumechange", (e) => {
+   if (e.target && e.target.tagName === "VIDEO") {
+     if (!e.target.muted) e.target.muted = true;
+     if (e.target.volume > 0) e.target.volume = 0;
+   }
+ }, true);
 
  // Service Cards Click Handling -> Navigate to dedicated separate HTML page
   const categoryPageMap = {

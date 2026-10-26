@@ -761,6 +761,15 @@ footer {
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
   cursor: pointer;
   text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.float-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.float-btn svg {
+  display: block;
+  pointer-events: none;
 }
 .float-whatsapp { background: #25d366; }
 .float-call { background: #1d4ed8; }
@@ -1618,9 +1627,15 @@ footer {
 
 <!-- Floating Quick Actions -->
 <div class="floating">
-  <a class="float-btn float-whatsapp" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Krishna Stone Craft">💬</a>
-  <a class="float-btn float-call" href="tel:+919672739036" aria-label="Call Krishna Stone Craft">☎</a>
-  <button type="button" class="float-btn float-top" id="subBackTop" aria-label="Back to top">↑</button>
+  <a class="float-btn float-call" href="tel:+919672739036" aria-label="Call Krishna Stone Craft" title="Call +91 96727 39036">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.93c0-.53-.44-.93-.97-.93H4.07c-.55 0-1.02.43-1.02.98 0 9.39 7.63 17.02 17.02 17.02.55 0 .94-.47.94-1.02v-3.61c0-.52-.4-.99-.97-.99z"/></svg>
+  </a>
+  <a class="float-btn float-whatsapp" href="https://wa.me/919672739036?text=Hello%20Krishna%20Stone%20Craft" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Krishna Stone Craft" title="Chat on WhatsApp">
+    <svg width="23" height="23" viewBox="0 0 24 24" fill="white"><path d="M12.031 0C5.397 0 .017 5.38.017 12.015c0 2.118.552 4.185 1.602 6.007L0 24l6.166-1.618a11.968 11.968 0 0 0 5.865 1.533h.005c6.632 0 12.012-5.38 12.017-12.016A11.954 11.954 0 0 0 20.57 3.52 11.96 11.96 0 0 0 12.031 0zm0 2.003a9.98 9.98 0 0 1 7.07 2.934 9.98 9.98 0 0 1 2.93 7.078c-.004 5.53-4.498 10.024-10.027 10.024a10.02 10.02 0 0 1-5.11-1.397l-.366-.218-3.668.962.978-3.576-.238-.38a9.99 9.99 0 0 1-1.53-5.49c0-5.532 4.496-10.027 10.03-10.027zm-2.82 4.908c-.198 0-.428.075-.65.317-.223.243-.852.833-.852 2.031 0 1.198.873 2.353.996 2.518.122.164 1.717 2.622 4.16 3.678 2.032.879 2.446.704 2.888.665.443-.04 1.428-.584 1.629-1.15.202-.566.202-1.05.141-1.15-.06-.1-.22-.16-.462-.28-.242-.122-1.428-.705-1.65-.785-.222-.081-.383-.122-.544.122-.162.243-.624.785-.765.947-.141.162-.282.182-.524.06-.242-.12-1.024-.378-1.95-1.203-.721-.643-1.208-1.438-1.35-1.68-.14-.243-.015-.374.106-.495.11-.11.242-.283.363-.425.121-.14.161-.242.242-.403.08-.162.04-.303-.02-.424-.06-.122-.544-1.313-.746-1.8-.196-.475-.395-.41-.544-.418l-.463-.008z"/></svg>
+  </a>
+  <button type="button" class="float-btn float-top" id="subBackTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 </div>
 
 <script>
