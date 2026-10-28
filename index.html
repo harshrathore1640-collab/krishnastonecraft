@@ -456,6 +456,16 @@ video::-webkit-media-controls-volume-slider-container {
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brown)}
 .field textarea{min-height:95px;resize:vertical}
 .contact-form .btn{width:100%}
+.location-section{background:#fff}
+.location-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.location-copy h2{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;line-height:1.04;margin:18px 0}
+.location-copy p{font-size:12px;color:var(--muted);line-height:2}
+.location-address{display:flex;gap:14px;align-items:flex-start;margin:22px 0}
+.location-address .contact-icon{flex-shrink:0}
+.location-address strong{font-size:11px;display:block}
+.location-address p{font-size:11px}
+.location-map{min-width:0;border:1px solid var(--line);box-shadow:0 10px 35px #4d38200b;overflow:hidden}
+.location-map iframe{display:block;width:100%;height:380px;border:0}
 
 /* FAQ */
 .faq{background:white}
@@ -1178,7 +1188,7 @@ section h1, section h2, section h3,
 #hero-title-group>div a{width:auto;min-width:170px;max-width:100%;pointer-events:auto}
 #hero .relative.z-20{align-items:center!important;justify-content:center!important;padding-top:clamp(1rem,4vh,3rem)!important;padding-bottom:clamp(2rem,7vh,5rem)!important}
 .hero-statement-text{text-align:center}
-.service-grid,.process-grid,.work-grid,.about-grid,.contact-grid,.footer-grid,
+.service-grid,.process-grid,.work-grid,.about-grid,.contact-grid,.location-grid,.footer-grid,
 .form-grid,.craft-spaces-grid,.gallery-photo-grid{min-width:0}
 .service-card,.process-card,.video-card,.work-large,.work-tile,.about-visual,
 .contact-form,.contact-copy,.footer-col{min-width:0}
@@ -1186,7 +1196,7 @@ video{max-width:100%}
 @media(max-width:850px){
  .hero-full-content{grid-template-columns:minmax(0,1fr)!important}
  .hero-floating-exhibition{height:360px}
- .work-grid,.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)!important}
+ .work-grid,.about-grid,.contact-grid,.location-grid{grid-template-columns:minmax(0,1fr)!important}
  .service-grid,.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
  .hero-spline-gradient{background:linear-gradient(180deg,rgba(20,14,10,.48),rgba(20,14,10,.7))!important}
@@ -1206,13 +1216,15 @@ video{max-width:100%}
  #hero-title-group>div a{width:auto!important;min-width:165px;padding:13px 22px!important}
  .service-grid,.process-grid,.footer-grid{grid-template-columns:minmax(0,1fr)!important}
  .service-image{height:290px!important}
- .work-grid,.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)!important;gap:22px!important}
+ .work-grid,.about-grid,.contact-grid,.location-grid{grid-template-columns:minmax(0,1fr)!important;gap:22px!important}
  .work-large{height:280px!important}
  .work-side{grid-template-columns:minmax(0,1fr)!important}
  .about-visual{height:270px!important}
- .about-copy h2,.contact-copy h2,.cta h2{font-size:clamp(1.9rem,8vw,2.5rem)!important;text-align:center!important}
- .about-copy .eyebrow,.contact-copy .eyebrow,.cta .eyebrow{justify-content:center}
- .about-copy,.contact-copy{text-align:center}
+ .about-copy h2,.contact-copy h2,.location-copy h2,.cta h2{font-size:clamp(1.9rem,8vw,2.5rem)!important;text-align:center!important}
+ .about-copy .eyebrow,.contact-copy .eyebrow,.location-copy .eyebrow,.cta .eyebrow{justify-content:center}
+ .about-copy,.contact-copy,.location-copy{text-align:center}
+ .location-address{justify-content:center;text-align:left}
+ .location-map iframe{height:300px}
  .about-points{grid-template-columns:minmax(0,1fr)!important}
  .video-header-bar{align-items:stretch!important}
  .video-card{flex:0 0 100%!important;max-width:100%!important}
@@ -1256,7 +1268,7 @@ video{max-width:100%}
    <div><div class="brand-name">Krishna Stone Craft</div><div class="brand-sub">The Art of Natural Stone</div></div>
   </a>
   <nav class="nav-links" id="navLinks">
-   <a href="#home">Home</a><a href="#services">Our Craft</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#gallery">Videos</a><a href="#contact">Contact</a>
+   <a href="#home">Home</a><a href="#services">Our Craft</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#gallery">Videos</a><a href="#contact">Contact</a><a href="#location">Location</a>
   </nav>
   <a class="btn" href="#contact">Discuss Your Project ↗</a>
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -1292,6 +1304,7 @@ video{max-width:100%}
     <a href="index.html#about">About Krishna Stone Craft</a>
     <a href="index.html#gallery">Craft Showcase Videos</a>
     <a href="index.html#contact">Contact &amp; Custom Quote</a>
+    <a href="index.html#location">Our Location</a>
   </div>
   <div class="mobile-contact-group">
     <a class="btn" style="width:100%;text-align:center;justify-content:center;" href="tel:+919672739036">☎ Call +91 96727 39036</a>
@@ -2092,6 +2105,24 @@ video{max-width:100%}
   </form>
  </div>
 </section>
+
+<section class="section location-section" id="location">
+  <div class="container location-grid">
+   <div class="location-copy">
+    <div class="eyebrow">Visit Krishna Stone Craft</div>
+    <h2>Find Our Location.</h2>
+    <p>Visit us near Hanuman Temple in Rahmat Nagar, Moti Nagar, Hyderabad.</p>
+    <div class="location-address">
+     <div class="contact-icon" aria-hidden="true">⌖</div>
+     <div><strong>Our Address</strong><p>Near Hanuman Temple, Rahmat Nagar, Moti Nagar, Hyderabad, Telangana 500045</p></div>
+    </div>
+    <a class="btn" href="https://maps.app.goo.gl/ZGUMcKfGwGnGfz6u9" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+   </div>
+   <div class="location-map">
+    <iframe src="https://maps.google.com/maps?q=Near%20Hanuman%20Temple%2C%20Rahmat%20Nagar%2C%20Moti%20Nagar%2C%20Hyderabad%2C%20Telangana%20500045&amp;output=embed" title="Map to Krishna Stone Craft near Hanuman Temple, Rahmat Nagar, Hyderabad" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+   </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -2125,6 +2156,7 @@ video{max-width:100%}
     <a href="https://wa.me/919672739036" target="_blank" rel="noopener">WhatsApp Inquiries ↗</a>
     <a href="https://www.instagram.com/krishnastonecraft/" target="_blank" rel="noopener">Instagram @krishnastonecraft ↗</a>
     <a href="index.html#contact">Discuss Your Project</a>
+    <a href="index.html#location">Our Location</a>
    </div>
   </div>
   <div class="footer-bottom"><span>&copy; <span id="year">2026</span> Krishna Stone Craft. All rights reserved.</span><span>Architectural Stone Craftsmanship · Pan India Service</span></div>
